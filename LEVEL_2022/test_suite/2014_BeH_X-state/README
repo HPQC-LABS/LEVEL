@@ -1,0 +1,4 @@
+(1) level_withTrialEnergies.9 seems to be identical to Table IV of Dattani's 2015 BeH paper for the 2014 Empirical column, when you look at the p6q33N6_IROUND-1 case. 
+(2) but (1) doesn't have 13 levels for BeH of 2011 Koput.
+(3) level.9 has 13 levels for BeH, but not 20 levels for BeT (for 2011 Koput), and not the correct (p6q3N6_IROUND-1) case for 2014 Empirical
+(4) level_withTrialEnergies_BOB.9 has 20 levels for BeT (though one is weirdly labelled as 21?!) for (2011 Koput), but doesn't have BeH.
