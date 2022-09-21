@@ -1,11 +1,11 @@
 c***********************************************************************
-c***** R.J. Le Roy  subroutine SCHRQ, last updated  21 August 2007 *****
-c   !!!!   Form modified for handling Stolyarov radial variable  !!!!!
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c                COPYRIGHT 2007  by  Robert J. Le Roy                  +
-c   Dept. of Chemistry, Univ. of Waterloo, Waterloo, Ontario, Canada   +
+c Please inform me of any bugs at nike@hpqc.org or ndattani@uwaterloo.ca
+c***********************************************************************
 c    This software may not be sold or any other commercial use made    +
-c      of it without the express written permission of the author.     +
+c     of it without the express written permission of the authors.     +
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+c*****  subroutine SCHRQ, last updated  21 August 2007 *****
+c   !!!!   Form modified for handling Stolyarov radial variable  !!!!!
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c** SCHRQ solves radial Schrodinger equation in dimensionless form
 c  d^2WF/dy^2 = - [(E-V(R))*BFCT*(r')^2 - F(y)]*WF(R) ,  where WF(I) is

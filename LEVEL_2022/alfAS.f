@@ -1,9 +1,12 @@
 c***********************************************************************
+c Please inform me of any bugs at nike@hpqc.org or ndattani@uwaterloo.ca
+c***********************************************************************
+c    This software may not be sold or any other commercial use made    +
+c     of it without the express written permission of the authors.     +
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       SUBROUTINE ALFas(NDP,YMIN,YH,NCN,V,SWF,VLIM,KVMAX,AFLAG,ZMU,EPS,
      1                                        GV,BFCT,INNODE,INNR,IWR)
 c***********************************************************************
-c   Version 2.0 dated  April 20, 2009
-c-----------------------------------------------------------------------
 c** The subroutine ALF (Automatic vibrational Level Finder) will
 c   automatically generate the eigenvalues from the first vibrational
 c   level (v=0) to a user specified level (v=KVMAX) or the highest
@@ -12,16 +15,6 @@ c   minimum potential (V). These energies are stored and returned to the
 c   calling program in the molecular constants array GV(v=0-KVMAX).
 c** For any errors that cannot be resolved within the subroutine, ALF
 c   returns AFLAG with a value that defines which error had occured.
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c+++++++++++++++   COPYRIGHT 2009  by  Robert J. Le Roy   ++++++++++++++
-c   Dept. of Chemistry, Univ. of Waterloo, Waterloo, Ontario, Canada   +
-c    This software may not be sold or any other commercial use made    +
-c     of it without the express written permission of the authors.     +
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c++++++ Please inform me of any bugs, by phone at: (519)888-4051 +++++++
-c+++++++++ by e-mail to: leroy@uwaterloo.ca , or by Post at: +++++++++++
-c+++ Dept. of Chemistry, Univ. Waterloo, Waterloo, Ontario  N2L 3G1 ++++
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c** Uses the Schrodinger solver subroutine SCHRQas.
 c
 c** On entry:

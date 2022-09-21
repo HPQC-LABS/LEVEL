@@ -1,4 +1,9 @@
 c***********************************************************************
+c Please inform me of any bugs at nike@hpqc.org or ndattani@uwaterloo.ca
+c***********************************************************************
+c    This software may not be sold or any other commercial use made    +
+c     of it without the express written permission of the authors.     +
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       SUBROUTINE MASSES(IAN,IMN,NAME,GELGS,GNS,MASS,ABUND)
 c***********************************************************************
 c** For isotope with (input) atomic number IAN and mass number IMN,
@@ -15,9 +20,8 @@ c  al. (Blackwell, 2'nd Edition, Oxford, 1993).
 c** If the input value of IMN does not equal one of the tabulated values
 c  for atomic species IAN, return the abundance-averaged standard atomic
 c  weight of that atom and set GNS=-1 and ABUND=-1.
-c                          COPYRIGHT 2005
-c** By R.J. Le Roy (with assistance from G.T. Kraemer & J.Y. Seto).
-c                      Last modified  1 June 2005
+c** Before Git tracking, contributions were from:
+c** N Dattani, G T Kraemer, R J Le Roy, J Y Seto
 c***********************************************************************
       REAL*8 zm(123,0:10),mass,ab(123,10),abund
       INTEGER i,ian,imn,gel(123),nmn(123),mn(123,10),ns2(123,10),

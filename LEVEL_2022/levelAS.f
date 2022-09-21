@@ -1,15 +1,11 @@
 c***********************************************************************
-c******  Eigenvalue program  LEVEL 9.0 : as of  28 June 2009  ********
-c   !!!! Form modified for handling Stolyarov radial variable  !!!!!
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c                COPYRIGHT 2005-09  by  Robert J. Le Roy               +
-c   Dept. of Chemistry, Univ. of Waterloo, Waterloo, Ontario, Canada   +
+c Please inform me of any bugs at nike@hpqc.org or ndattani@uwaterloo.ca
+c***********************************************************************
 c    This software may not be sold or any other commercial use made    +
-c      of it without the express written permission of the author.     +
+c     of it without the express written permission of the authors.     +
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c+ Please inform me of any bugs, by phone at: (519)888-4567, ext. 4051 +
-c++++++++ by e-mail to: leroy@UWaterloo.ca , or write me at: +++++++++++
-c+++ Dept. of Chemistry, Univ. Waterloo, Waterloo, Ontario  N2L 3G1 ++++
+c******  Eigenvalue program  LEVEL 2022 ********************************
+c   !!!! Form modified for handling Stolyarov radial variable  !!!!!
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c** Program for calculating eigenvalues and eigenfunctions (and if
 c  desired, also various expectation values & matrix elements) of a

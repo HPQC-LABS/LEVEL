@@ -1,3 +1,9 @@
+c***********************************************************************
+c Please inform me of any bugs at nike@hpqc.org or ndattani@uwaterloo.ca
+c***********************************************************************
+c    This software may not be sold or any other commercial use made    +
+c     of it without the express written permission of the authors.     +
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c!!
 c!! Partially fixed version of levqad for unequally spaced points.
 c!! some slippage merging this with  WIDTH

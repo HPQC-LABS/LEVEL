@@ -1,4 +1,9 @@
-C----------------------------------------------------------------------
+c***********************************************************************
+c Please inform me of any bugs at nike@hpqc.org or ndattani@uwaterloo.ca
+c***********************************************************************
+c    This software may not be sold or any other commercial use made    +
+c     of it without the express written permission of the authors.     +
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	SUBROUTINE SCATLENGHT_MAPTAN 
      &           (Mes, U, Scale, Rmin, C4, Rbar, alpha, SL, SL_err)
 C----------------------------------------------------------------------

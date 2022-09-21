@@ -1,4 +1,9 @@
 c***********************************************************************
+c Please inform me of any bugs at nike@hpqc.org or ndattani@uwaterloo.ca
+c***********************************************************************
+c    This software may not be sold or any other commercial use made    +
+c     of it without the express written permission of the authors.     +
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c     SUBROUTINE POTGENCs2Xa(ISTATE,IMN1,IMN2,NPP,VLIM,XO,RM2,VV)
 c***********************************************************************
       SUBROUTINE POTGEN(LNPT,NPP,IAN1,IAN2,IMN1,IMN2,VLIM,XO,RM2,VV,
@@ -18,7 +23,7 @@ c** Note that this is a special 'standalone' version of subroutine
 c  POTGEN from the general-purpose bound-state Franck-Condon code LEVEL.  
 c  Replacing the calling statement in line 2 (above) with the (currently)
 c  commented-out lines 4 & 5 allows this routine to be compiled and used
-c  in the normal way with R.J. Le Roy's program LEVEL.  However, in that
+c  in the normal way with LEVEL.  However, in that
 c  case it is necessary to define parameter ISTATE internally at at
 c  line 80           as ISTATE=1  for the X(^1\Sigma_g^+) state 
 c  or at line 81     as ISTATE=2 for the a(^3\Sigma_u^+}) state.

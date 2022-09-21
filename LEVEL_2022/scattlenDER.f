@@ -1,10 +1,10 @@
 c***********************************************************************
-c***** R.J. Le Roy  subroutine SCATTLEN, last updated 30 April 2011 ****
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c                COPYRIGHT 2011  by  Robert J. Le Roy                  +
-c   Dept. of Chemistry, Univ. of Waterloo, Waterloo, Ontario, Canada   +
+c Please inform me of any bugs at nike@hpqc.org or ndattani@uwaterloo.ca
+c***********************************************************************
 c    This software may not be sold or any other commercial use made    +
-c      of it without the express written permission of the author.     +
+c     of it without the express written permission of the authors.     +
+c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+c***** Subroutine SCATTLEN, last updated 30 April 2011 ****
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c** SCATTLEN solves the radial Schrodinger equation in dimensionless 
 c  form  d^2WF/dy^2 = - [(VLIM-V(R))*(r')^2 - F(y)]*WF(y) ,  where WF(I)
