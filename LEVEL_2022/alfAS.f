@@ -343,8 +343,8 @@ c-----------------------------------------------------------------------
      1 ')=',G15.8/8X,'lies above potential maximum or asymptote at  VMAX
      2=',G15.8)
   624 FORMAT(/' *** SCHRQ FAILS in ALF when searching for  v=',i3,
-     1  ' J=',i3,'   with   EO=',f9.3/5x,'Check range and/or contact R.J
-     2. Le Roy [leroy@uwaterloo.ca]')
+     1  ' J=',i3,'   with   EO=',f9.3/5x,'Check range and/or contact 
+     2. Nike Dattani [nike@hpqc.org,ndattani@uwaterloo.ca]')
   626 FORMAT(/' ALF successfully finds all (J=',i3,') vibrational levels
      1 up to   v= KVMAX=',I3)
   628 FORMAT(4x,'ALF fails to find level   v=',i3,', J=',i3)
