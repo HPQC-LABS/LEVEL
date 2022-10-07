@@ -1,14 +1,7 @@
 C***********************************************************************
-c*******  Eigenvalue program  LEVEL_2016 : as of  10 March 2016  ********
+c*******  Eigenvalue program  LEVEL_2016 : as of  10 March 2016  *******
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c                COPYRIGHT 2005-16  by  Robert J. Le Roy               +
-c   Dept. of Chemistry, Univ. of Waterloo, Waterloo, Ontario, Canada   +
-c    This software may not be sold or any other commercial use made    +
-c      of it without the express written permission of the author.     +
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c++++++ Please inform me of any bugs, by phone at: (519)888-4051 +++++++
-c+++++++++ by e-mail to: leroy@UWaterloo.ca , or by Post at: +++++++++++
-c+++ Dept. of Chemistry, Univ. Waterloo, Waterloo, Ontario  N2L 3G1 ++++
+c                COPYRIGHT 2005-16  by  Various Authors                +
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c** Program for calculating eigenvalues and eigenfunctions (and if
 c  desired, also various expectation values & matrix elements) of a
@@ -1539,11 +1532,6 @@ c               RM2(i) is the array  1/(distance**2) in units [1/Ang**2]
 c** On exit:    RCNST(i)  is the set of 7 rotational constants: Bv, -Dv,
 c                       Hv, Lv, Mv, Nv & Ov
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c               COPYRIGHT 1994-2011  by  Robert J. Le Roy              +
-c   Dept. of Chemistry, Univ. of Waterloo, Waterloo, Ontario, Canada   +
-c    This software may not be sold or any other commercial use made    +
-c      of it without the express written permission of the author.     +
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c  Authors: R.J. Le Roy & J. Tellinghuisen         Version of 05/02/2011
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c** Dimension:  potential arrays  and  vib. level arrays.
@@ -1814,9 +1802,6 @@ c  weight of that atom and set DGNS=-1 and ABUND=-1.
 c** For Atomic number IAN=0 and isotope mass numbers IMN=1-3,  return the
 c    masses of the proton, deuteron, and triton, p,d & t, respectively
 c Masses and properties of selected Halo nuclei an unstable nuclei included
-c                 COPYRIGHT 2005-2015  :  last  updated 10 January 2016
-c** By R.J. Le Roy, with assistance from 
-c                 G.T. Kraemer, J.Y. Seto and K.V. Slaughter.
 c***********************************************************************
       REAL*8 zm(0:123,0:15),mass,ab(0:123,15),abund
       INTEGER i,ian,imn,gel(0:123),nmn(0:123),mn(0:123,15),
@@ -2552,15 +2537,6 @@ c** For any errors that cannot be resolved within the subroutine, ALF
 c   returns AFLAG with a value that defines which error had occured.
 c++++++++++   Version last updated  July 16, 2015 ++++++++++++++++++++++
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c+++++++++++++   COPYRIGHT 2008-15  by  Robert J. Le Roy   +++++++++++++
-c   Dept. of Chemistry, Univ. of Waterloo, Waterloo, Ontario, Canada   +
-c    This software may not be sold or any other commercial use made    +
-c     of it without the express written permission of the authors.     +
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c++++++ Please inform me of any bugs, by phone at: (519)888-4051 +++++++
-c+++++++++ by e-mail to: leroy@uwaterloo.ca , or by Post at: +++++++++++
-c+++ Dept. of Chemistry, Univ. Waterloo, Waterloo, Ontario  N2L 3G1 ++++
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c** Uses the Schrodinger solver subroutine SCHRQ.
 c
 c** On entry:
@@ -3166,13 +3142,6 @@ c     RETURN
       END
 c23456789 123456789 123456789 123456789 123456789 123456789 123456789 12
 
-c***********************************************************************
-c***** R.J. Le Roy  subroutine SCHRQ, last modified  9 May 2015 ********
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c                COPYRIGHT 2008-2014  by  Robert J. Le Roy             +
-c   Dept. of Chemistry, Univ. of Waterloo, Waterloo, Ontario, Canada   +
-c    This software may not be sold or any other commercial use made    +
-c      of it without the express written permission of the author.     +
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c** SCHRQ solves radial Schrodinger equation in dimensionless form
 c  d2WF/dR2 = - (E-V(R))*WF(R) ,  where WF(I) is the wave function.
