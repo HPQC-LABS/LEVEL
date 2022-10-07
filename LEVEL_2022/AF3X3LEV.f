@@ -111,7 +111,9 @@ c     WRITE(25,600) RDIST ,ULR
 c 600 FORMAT(2D16.7)
 c     WRITE(26,601) RDIST , DEIGM1, DEIGR ,DEIGDe
 c 601 FORMAT(4D16.7)  
-      Modulus = SQRABS(Z) 
+cccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c     Modulus = SQRABS(Z) 
+      Modulus =  REAL(Z)**2 
       RETURN
 
       CONTAINS
@@ -124,7 +126,7 @@ c   eigenvalues W and eigenvector matric  Q
       PARAMETER (N=3)
       REAL*8    H(3,3),Q(3,3), W(3)
       REAL*8    SD,SO,S,T,C,G,B,Z,THRESH
-      DOUBLE PRECISION FUNCTION SQRABS
+c     DOUBLE PRECISION FUNCTION SQRABS
 * Initialize Q to the identitity matrix
 * --- This loop can be omitted if only the eigenvalues are desired ---
       DO  X = 1, N
@@ -136,7 +138,7 @@ c   eigenvalues W and eigenvector matric  Q
           ENDDO
 * Initialize W to diag(A)
       DO  X = 1, N
-          W(X) = DREAL(H(X, X))
+          W(X) =  REAL(H(X, X))
           ENDDO
 * Calculate SQR(tr(A))
       SD= 0.0D0
@@ -150,7 +152,7 @@ c   eigenvalues W and eigenvector matric  Q
           SO = 0.0D0
           DO  X = 1, N
               DO  Y = X+1, N
-                  SO = SO + ABS(DREAL(H(X, Y)))
+                  SO = SO + ABS(REAL(H(X, Y)))
                   ENDDO
               ENDDO
           IF(SO.EQ.0.0D0) RETURN
@@ -162,11 +164,11 @@ c   eigenvalues W and eigenvector matric  Q
 * Do sweep
           DO  X= 1, N
               DO  Y= X+1, N
-                  G= 100.0D0*(ABS(DREAL(H(X, Y))) )
+                  G= 100.0D0*(ABS(REAL(H(X, Y))) )
                   IF((I.GT.4).AND.((ABS(W(X))+G).EQ.ABS(W(X)))
      $                         .AND.((ABS(W(Y))+G).EQ.ABS(W(Y)))) THEN
                       H(X, Y)= 0.0D0
-                    ELSEIF(ABS(DREAL(H(X, Y))).GT.THRESH) THEN
+                    ELSEIF(ABS(REAL(H(X, Y))).GT.THRESH) THEN
 * Calculate Jacobi transformation
                       B= W(Y) - W(X)
                       IF((ABS(B)+G).EQ.ABS(B)) THEN
@@ -174,17 +176,20 @@ c   eigenvalues W and eigenvector matric  Q
                         ELSE
                           IF(B .LE. 0.0D0) THEN
                               T= -2.0D0 * H(X, Y)
-     $                       /(SQRT(B**2 + 4.0D0*SQRABS(H(X, Y))) - B)
+c    $                       /(SQRT(B**2 + 4.0D0*SQRABS(H(X, Y))) - B)
+     $                       /(SQRT(B**2 + 4.0D0*REAL(H(X, Y))**2) - B)
                             ELSE IF (B .EQ. 0.0D0) THEN
                               T= H(X, Y) * (1.0D0 / ABS(H(X, Y)))
                             ELSE
                               T= 2.0D0 * H(X, Y)
-     $                       /(SQRT(B**2 + 4.0D0*SQRABS(H(X, Y))) + B)
+c    $                       /(SQRT(B**2 + 4.0D0*SQRABS(H(X, Y))) + B)
+     $                       /(SQRT(B**2 + 4.0D0*REAL(H(X, Y))**2) + B)
                             ENDIF
                         ENDIF
-                      C= 1.0D0 / SQRT( 1.0D0 + SQRABS(T) )
+c                     C= 1.0D0 / SQRT( 1.0D0 + SQRABS(T) )
+                      C= 1.0D0 / SQRT( 1.0D0 + REAL(T)**2 )
                       S= T * C
-                      Z= DREAL(T * (H(X, Y)))
+                      Z= REAL(T * (H(X, Y)))
 * Apply Jacobi transformation
                       H(X, Y) = 0.0D0
                       W(X)    = W(X) - Z
@@ -217,16 +222,19 @@ c   eigenvalues W and eigenvector matric  Q
           ENDDO
       PRINT *, "ZHEEVJ3: No convergence."
       END SUBROUTINE ZHEEVJ3
-
+     
+c     CONTAINS
 *=======================================================================
-      DOUBLE PRECISION FUNCTION SQRABS(Z)
+c      DOUBLE PRECISION FUNCTION SQRABS(Z)
+c      SUBROUTINE SQRABS(Z)
 *=======================================================================
 * Calculates the squared absolute value of a complex number Z
 * ----------------------------------------------------------------------
 *  Parameters ..
-      REAL*8 Z
-      SQRABS = DREAL(Z)**2
-      RETURN
-      END FUNCTION SQRABS
+c     REAL*8 Z
+c     SQRABS = DREAL(Z)**2
+c     RETURN
+c     END SUBROUTINE SQRABS
+c     END FUNCTION SQRABS
 *
       END SUBROUTINE AF3X3LEV
