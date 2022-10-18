@@ -19,7 +19,7 @@ endif
 #
 # as usual, list the objects
 #
-OBJECTS = levelAS.o masses.o alfAS.o scecor.o schrqAS.o scattlenDER.o prepot.o potgen.o AF3X3LEV.o widthAS.o 
+OBJECTS = levelAS.o 
 
 level: $(OBJECTS)
 	$(FC) $(FFLAGS) $(OBJECTS) -o nASlev.x
