@@ -1,6 +1,7 @@
 &VIBROT
 RoVibrational spectrum
-Title = Vib-Rot spectrum for BeD
+NOSPectroscopic
+Title = Vib-Rot spectrum for BeD(X) Koput JCP 135, 244308 (2011) Table III
 Atoms = 0 Be  0 D
 Potential   
    1.1338356256484985       0.56024964257602816     
@@ -51,10 +52,11 @@ Potential
    15.117808341979980        8.0703699418838828E-002
    18.897260427474976        8.0706278304545326E-002
    37.794520854949951        8.0707112113881527E-002
-Plot  = 1.0 10.0 0.1
-STEP = 0.0001
-Grid  = 500
-Range = 1.0 10.0
-Vibrations = 10
-Rotations  = 2 10
-Orbital    = 2
+Scale
+Step = 0.0000001
+Grid  = 550
+Range = 0.4 200.0
+Vibrations = 19
+Rotations  = 0 0
+Orbital    = 0
+
