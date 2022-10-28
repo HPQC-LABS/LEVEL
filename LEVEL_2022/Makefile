@@ -19,15 +19,17 @@ endif
 #
 # as usual, list the objects
 #
-OBJECTS = levelAS.o masses.o alfAS.o scecor.o schrqAS.o scattlenDER.o prepot.o potgen.o AF3X3LEV.o widthAS.o 
+OBJECTS = levelAS.o 
 
 level: $(OBJECTS)
-	$(FC) $(FFLAGS) $(OBJECTS) -o nASlev.x
+	$(FC) $(FFLAGS) $(OBJECTS) -o level.x
 
 # option to clean everything up afterwards
 #
 #clean:
-#         rm -f *.o lev.x
+#         rm -f *.o level.x
 #--------------------------------------------------------------
 # Form from Sean Mcleod,  13 February 2008
 #--------------------------------------------------------------
+# To run the program do:
+# ./level.x < input.5 > fort.6

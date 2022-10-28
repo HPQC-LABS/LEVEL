@@ -1,0 +1,262 @@
+   This run of MOLCAS is using the pymolcas driver
+
+                             OPE
+                             OPE          NMOL  CASOP  ENMOLC A   SO
+                 OPE        NMOLC        AS  OP EN  MO LC     AS  OP
+                OPENM       OL CA        SO  PE NM  OL CA     SOP EN
+                OP EN      MO   LC       AS  OP ENMOL  CASO   PENMOL
+                OP  EN     MO   LC       AS  OP EN     MO     LC ASO
+               OP   E  NMOL  C  AS       OP  EN MO     LC     AS  OP
+               OP  E   NMO   LC AS        OPEN  MO     LCASOP EN   M
+               O  PEN   MO  LCA  SO
+            OPE   NMO   L   CAS    OP
+        OPENMOL  CASOP     ENMOL   CASOPE
+     OPENMOLCA   SOPENMOLCASOPEN   MOLCASOPE
+    OPENMOLCAS   OP           EN   MOL    CAS
+    OPENMOLCAS       OP  ENM        O     LCA
+    OPENMOLCAS    OPEN  MOLCASO     P  E  NMO
+    OPENMOLCAS     OP               E  N  MOL
+    OPENMOLCA   SO           PENM   O  L  CAS    OPEN    MO    LCAS
+    OPENMOLCA   SOP           ENM   O  L  CAS   OP  EN  MOLC  AS   O
+    OPENMOLCA   SOPE           NM      O  LCA   S      OP  EN MO
+    OPENMOLC                AS         O  PEN   M      OL  CA  SOPE
+    OPENMO        LCASOPE  NMOL        C  ASO   P      ENMOLC     AS
+    OPE     NMO      LCA  SO     P     E   NM   OL  CA SO  PE N   MO
+          OPENMOLCA            SOPE   NMO        LCAS  O    P  ENMO
+     OPENMOLCASOPENMOLCASOPENMOLCASOPENMOLCA
+        OPENMOLCASOPENMOLCASOPENMOLCASOPE
+            OPENMOLCASOPENMOLCASOPENM
+               OPENMOLCASOPENMOLCA        version: v20.10 ?
+                   OPENMOLCASO
+                       OPE                tag:
+
+ OpenMolcas is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 2.1.
+ OpenMolcas is distributed in the hope that it will be useful, but it
+ is provided "as is" and without any express or implied warranties.
+ For more details see the full text of the license in the file
+ LICENSE or in <http://www.gnu.org/licenses/>.
+
+                 Copyright (C) The OpenMolcas Authors
+           For the author list and the recommended citation,
+                   consult the file CONTRIBUTORS.md
+
+           *************************************************
+           * pymolcas version py2.13                       *
+           *   build df7b0ad5c844738454f9b0a3ade4831c      *
+           *   (after the EMIL interpreter by V. Veryazov) *
+           *************************************************
+
+configuration info
+------------------
+Host name: build-node.computecanada.ca (Linux)
+C Compiler ID: Intel
+C flags: -O2 -xCore-AVX512 -ftz -fp-speculation=safe -fp-model source -std=gnu99 -qopenmp
+Fortran Compiler ID: Intel
+Fortran flags: -O2 -xCore-AVX512 -ftz -fp-speculation=safe -fp-model source  -fpp -i8 -r8 -heap-arrays -qopenmp
+Definitions: _MOLCAS_;_I8_;_LINUX_;_GA_;_MOLCAS_MPP_;SCALAPACK;_MKL_;_FDE_
+Parallel: ON (GA=ON)
+
+
+   -------------------------------------------------------------------------------------------------------------------------------------
+  |
+  |           Project: BeH
+  |    Submitted from: /home/nike/LEVEL_arpit/LEVEL_2022/test_suite/vibrot/BeH
+  |      Scratch area: /tmp/BeH
+  |   Save outputs to: /home/nike/LEVEL_arpit/LEVEL_2022/test_suite/vibrot/BeH
+  |            Molcas: /cvmfs/soft.computecanada.ca/easybuild/software/2020/avx512/MPI/intel2020/openmpi4/openmolcas/20.10
+  |
+  | Scratch area is empty
+  |
+  |    MOLCAS_DRIVER = /cvmfs/soft.computecanada.ca/easybuild/software/2020/avx512/MPI/intel2020/openmpi4/openmolcas/20.10/sbin/pymolcas
+  |    MOLCAS_NPROCS = 1
+  |    MOLCAS_SOURCE = /cvmfs/soft.computecanada.ca/easybuild/software/2020/avx512/MPI/intel2020/openmpi4/openmolcas/20.10
+  | MOLCAS_STRUCTURE = 0
+  |
+   -------------------------------------------------------------------------------------------------------------------------------------
+
+++ ---------   Input file   ---------
+
+&VIBROT
+RoVibrational spectrum
+NOSPectroscopic
+Title = Vib-Rot spectrum for BeH(X) Koput JCP 135, 244308 (2011) Table III
+Atoms = 0 Be  0 H
+Potential
+   1.1338356256484985       0.56049310123319307
+   1.2283219277858735       0.43451973324918980
+   1.3228082299232482       0.33478394388676319
+   1.4172945320606232       0.25583627882430754
+   1.5117808341979981       0.19344356096329876
+   1.6062671363353729       0.14428863249689358
+   1.7007534384727478       0.10575549181229509
+   1.7952397406101226        7.5770427752363062E-002
+   1.8897260427474976        5.2682105986596985E-002
+   1.9842123448848725        3.5169786195461711E-002
+   2.0786986470222475        2.2172748994931678E-002
+   2.1731849491596220        1.2835483224389918E-002
+   2.2676712512969970        6.4651297761356549E-003
+   2.3621575534343719        2.4982704683266092E-003
+   2.4566438555717469        4.7496149084236099E-004
+   2.4944383764266971        1.2299826792741442E-004
+   2.5133356368541717        3.4122394091809834E-005
+   2.5322328972816468        0.0000000000000000
+   2.5511301577091219        1.8307354715034305E-005
+   2.5700274181365970        8.6593149915188407E-005
+   2.5889246785640720        2.0282070377925266E-004
+   2.6078219389915462        3.6482120076607318E-004
+   2.6456164598464964        8.1804897284519030E-004
+   2.7401027619838714        2.6182524423711585E-003
+   2.8345890641212463        5.2065333119908248E-003
+   2.9290753662586213        8.4061240024298056E-003
+   3.0235616683959963        1.2069207888087023E-002
+   3.1180479705333708        1.6071597497555559E-002
+   3.2125342726707458        2.0308342206518320E-002
+   3.4015068769454957        2.9140857166873049E-002
+   3.5904794812202452        3.7992982593801565E-002
+   3.7794520854949951        4.6430868808704867E-002
+   3.9684246897697451        5.4119046521985181E-002
+   4.1573972940444950        6.0806370539045022E-002
+   4.3463698983192440        6.6326621196529684E-002
+   4.5353425025939940        7.0640331519192384E-002
+   4.7243151068687439        7.3828955110876004E-002
+   4.9132877111434938        7.6072508217831458E-002
+   5.2912329196929928        7.8591327757776983E-002
+   5.6691781282424927        7.9653022197529025E-002
+   6.6140411496162415        8.0328954520071424E-002
+   7.5589041709899902        8.0467157278462764E-002
+   8.5037671923637390        8.0543480448903665E-002
+   9.4486302137374878        8.0591681918672303E-002
+   11.338356256484985        8.0635390841962806E-002
+   15.117808341979980        8.0653584288298594E-002
+   18.897260427474976        8.0656163174005091E-002
+   37.794520854949951        8.0656996983341292E-002
+Scale
+Step = 0.0000001
+Grid  = 500
+Range = 0.5 100.0
+Vibrations = 14
+Rotations  = 0 0
+Orbital    = 0
+
+-- ----------------------------------
+
+--- Start Module: vibrot at Thu Oct 27 19:50:27 2022 ---
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &VIBROT
+
+                       only a single process is used, running in SERIAL mode
+                      available to each process: 2.0 GB of memory, 40 threads
+                                            pid: 154555
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+
+ Vibration-Rotation spectrum for the BeH  molecule.
+ Vib-Rot spectrum for BeH(X) Koput JCP 135, 244308 (2011) Table III             
+  
+
+ Rotational quantum number range   0  0
+ Electronic angular momentum       0
+ Vibrational quantum number range  0 13
+ Mass of atom   9 Be   0.164282D+05 au
+ Mass of atom   1 H    0.183715D+04 au
+ Reduced mass          0.165237D+04 au
+
+ Statistics for numerical integration
+ Number of steps           499
+ Step length               0.010639
+ Radial integration range  0.500000100.000000 au
+ logarithmic range        -0.693147  4.605170
+
+ Spectroscopic constants will not be computed
+ Matrix elements of operators will not be computed
+
+ Potential read from input
+       R(au)     E(au)
+     1.133836    0.560493
+     1.228322    0.434520
+     1.322808    0.334784
+     1.417295    0.255836
+     1.511781    0.193444
+     1.606267    0.144289
+     1.700753    0.105755
+     1.795240    0.075770
+     1.889726    0.052682
+     1.984212    0.035170
+     2.078699    0.022173
+     2.173185    0.012835
+     2.267671    0.006465
+     2.362158    0.002498
+     2.456644    0.000475
+     2.494438    0.000123
+     2.513336    0.000034
+     2.532233    0.000000
+     2.551130    0.000018
+     2.570027    0.000087
+     2.588925    0.000203
+     2.607822    0.000365
+     2.645616    0.000818
+     2.740103    0.002618
+     2.834589    0.005207
+     2.929075    0.008406
+     3.023562    0.012069
+     3.118048    0.016072
+     3.212534    0.020308
+     3.401507    0.029141
+     3.590479    0.037993
+     3.779452    0.046431
+     3.968425    0.054119
+     4.157397    0.060806
+     4.346370    0.066327
+     4.535343    0.070640
+     4.724315    0.073829
+     4.913288    0.076073
+     5.291233    0.078591
+     5.669178    0.079653
+     6.614041    0.080329
+     7.558904    0.080467
+     8.503767    0.080543
+     9.448630    0.080592
+    11.338356    0.080635
+    15.117808    0.080654
+    18.897260    0.080656
+    37.794521    0.080657
+ Generating plot file:VIBPLT0 
+
+ Scaling parameter for potential:    1.239818
+
+ extremum points
+                        R(au)         Value
+ Min point            2.534942     -0.000001
+ Extrapolated value at infinity     0.080657
+
+
+ Eigenstates
+
+  Vib. q.n.   Rot. q.n.    Energy
+      0           0      0.004657
+      1           0      0.013706
+      2           0      0.022409
+      3           0      0.030756
+      4           0      0.038733
+      5           0      0.046317
+      6           0      0.053474
+      7           0      0.060153
+      8           0      0.066273
+      9           0      0.071701
+     10           0      0.076210
+     11           0      0.079375
+     12           0      0.080529
+     13           0      0.080657     Warning:function value at Rmax is    0.052061
+--- Stop Module: vibrot at Thu Oct 27 19:50:37 2022 /rc=_RC_ALL_IS_WELL_ ---
+*** files: BeH.VibPlt0 BeH.VibWvs xmldump
+    saved to directory /home/nike/LEVEL_arpit/LEVEL_2022/test_suite/vibrot/BeH
+--- Module vibrot spent 9 seconds ---
+
+.##################.
+.# Happy landing! #.
+.##################.
+
+    Timing: Wall=9.80 User=3.58 System=0.05
