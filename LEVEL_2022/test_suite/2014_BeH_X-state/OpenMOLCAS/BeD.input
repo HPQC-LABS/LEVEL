@@ -55,8 +55,8 @@ Potential
 Scale
 Step = 0.0000001
 Grid  = 550
-Range = 0.4 200.0
-Vibrations = 19
+Range = 0.4 40.0
+Vibrations = 100
 Rotations  = 0 0
 Orbital    = 0
 

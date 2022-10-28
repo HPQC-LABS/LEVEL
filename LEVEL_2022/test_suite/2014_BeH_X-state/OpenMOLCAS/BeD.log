@@ -61,9 +61,9 @@ Parallel: ON (GA=ON)
    -------------------------------------------------------------------------------------------------------------------------------------
   |
   |           Project: BeD
-  |    Submitted from: /home/nike/LEVEL_arpit/LEVEL_2022/test_suite/vibrot/BeD
+  |    Submitted from: /home/nike/LEVEL_arpit/LEVEL_2022/test_suite/2014_BeH_X-state/OpenMOLCAS
   |      Scratch area: /tmp/BeD
-  |   Save outputs to: /home/nike/LEVEL_arpit/LEVEL_2022/test_suite/vibrot/BeD
+  |   Save outputs to: /home/nike/LEVEL_arpit/LEVEL_2022/test_suite/2014_BeH_X-state/OpenMOLCAS
   |            Molcas: /cvmfs/soft.computecanada.ca/easybuild/software/2020/avx512/MPI/intel2020/openmpi4/openmolcas/20.10
   |
   | Scratch area is NOT empty
@@ -134,14 +134,14 @@ Potential
 Scale
 Step = 0.0000001
 Grid  = 550
-Range = 0.4 200.0
-Vibrations = 19
+Range = 0.4 40.0
+Vibrations = 100
 Rotations  = 0 0
 Orbital    = 0
 
 -- ----------------------------------
 
---- Start Module: vibrot at Thu Oct 27 19:57:53 2022 ---
+--- Start Module: vibrot at Thu Oct 27 23:41:55 2022 ---
  
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
 
@@ -149,7 +149,7 @@ Orbital    = 0
 
                        only a single process is used, running in SERIAL mode
                       available to each process: 2.0 GB of memory, 40 threads
-                                            pid: 177910
+                                            pid: 160479
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
  
 
@@ -159,16 +159,16 @@ Orbital    = 0
 
  Rotational quantum number range   0  0
  Electronic angular momentum       0
- Vibrational quantum number range  0 18
+ Vibrational quantum number range  0 99
  Mass of atom   9 Be   0.164282D+05 au
  Mass of atom   2 D    0.367148D+04 au
  Reduced mass          0.300084D+04 au
 
  Statistics for numerical integration
  Number of steps           549
- Step length               0.011341
- Radial integration range  0.400000200.000000 au
- logarithmic range        -0.916291  5.298317
+ Step length               0.008404
+ Radial integration range  0.400000 40.000000 au
+ logarithmic range        -0.916291  3.688879
 
  Spectroscopic constants will not be computed
  Matrix elements of operators will not be computed
@@ -240,20 +240,20 @@ Orbital    = 0
       1           0      0.010246
       2           0      0.016839
       3           0      0.023240
-      4           0      0.029444
-      5           0      0.035446
-      6           0      0.041237
-      7           0      0.046807
-      8           0      0.052140
-      9           0      0.057218
-     10           0      0.062010
-     11           0      0.066479
-     12           0      0.070566
-     13           0      0.074186
-     14           0      0.077207
-     15           0      0.079409
-     16           0      0.080462
-     17           0      0.080669
+      4           0      0.029445
+      5           0      0.035447
+      6           0      0.041239
+      7           0      0.046809
+      8           0      0.052144
+      9           0      0.057222
+     10           0      0.062016
+     11           0      0.066485
+     12           0      0.070573
+     13           0      0.074194
+     14           0      0.077214
+     15           0      0.079414
+     16           0      0.080463
+     17           0      0.080670
  ###############################################################################
  ###############################################################################
  ###                                                                         ###
@@ -266,13 +266,13 @@ Orbital    = 0
  ###                                                                         ###
  ###############################################################################
  ###############################################################################
---- Stop Module: vibrot at Thu Oct 27 19:57:57 2022 /rc=_RC_NOT_CONVERGED_ ---
+--- Stop Module: vibrot at Thu Oct 27 23:41:59 2022 /rc=_RC_NOT_CONVERGED_ ---
 *** files: BeD.VibWvs xmldump
-    saved to directory /home/nike/LEVEL_arpit/LEVEL_2022/test_suite/vibrot/BeD
+    saved to directory /home/nike/LEVEL_arpit/LEVEL_2022/test_suite/2014_BeH_X-state/OpenMOLCAS
 --- Module vibrot spent 3 seconds ---
 
 .#######################.
 .# Convergence problem #.
 .#######################.
 
-    Timing: Wall=3.79 User=3.68 System=0.03
+    Timing: Wall=3.70 User=3.59 System=0.04
