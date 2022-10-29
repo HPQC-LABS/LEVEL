@@ -310,7 +310,7 @@ Potential
    188.97260427474976       -1.1981553095760872E-006
 Scale
 Step = 0.00000001
-Grid  = 350
+Grid  = 345
 Range = 0.4 200.0
 Vibrations = 200
 Rotations  = 0 0
