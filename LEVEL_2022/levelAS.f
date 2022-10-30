@@ -1559,11 +1559,6 @@ c               RM2(i) is the array  (r')^2/(distance**2)
 c** On exit:    RCNST(i)  is the set of 7 rotational constants: Bv, -Dv,
 c                       Hv, Lv, Mv, Nv & Ov
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-c            COPYRIGHT 1994 - 2009  by  Robert J. Le Roy               +
-c   Dept. of Chemistry, Univ. of Waterloo, Waterloo, Ontario, Canada   +
-c    This software may not be sold or any other commercial use made    +
-c      of it without the express written permission of the author.     +
-c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c  Authors: R.J. Le Roy & J. Tellinghuisen         Version of 20/02/2009
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 c** Dimension:  potential arrays  and  vib. level arrays.
