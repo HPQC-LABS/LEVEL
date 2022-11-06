@@ -1,0 +1,528 @@
+   This run of MOLCAS is using the pymolcas driver
+
+                             OPE
+                             OPE          NMOL  CASOP  ENMOLC A   SO
+                 OPE        NMOLC        AS  OP EN  MO LC     AS  OP
+                OPENM       OL CA        SO  PE NM  OL CA     SOP EN
+                OP EN      MO   LC       AS  OP ENMOL  CASO   PENMOL
+                OP  EN     MO   LC       AS  OP EN     MO     LC ASO
+               OP   E  NMOL  C  AS       OP  EN MO     LC     AS  OP
+               OP  E   NMO   LC AS        OPEN  MO     LCASOP EN   M
+               O  PEN   MO  LCA  SO
+            OPE   NMO   L   CAS    OP
+        OPENMOL  CASOP     ENMOL   CASOPE
+     OPENMOLCA   SOPENMOLCASOPEN   MOLCASOPE
+    OPENMOLCAS   OP           EN   MOL    CAS
+    OPENMOLCAS       OP  ENM        O     LCA
+    OPENMOLCAS    OPEN  MOLCASO     P  E  NMO
+    OPENMOLCAS     OP               E  N  MOL
+    OPENMOLCA   SO           PENM   O  L  CAS    OPEN    MO    LCAS
+    OPENMOLCA   SOP           ENM   O  L  CAS   OP  EN  MOLC  AS   O
+    OPENMOLCA   SOPE           NM      O  LCA   S      OP  EN MO
+    OPENMOLC                AS         O  PEN   M      OL  CA  SOPE
+    OPENMO        LCASOPE  NMOL        C  ASO   P      ENMOLC     AS
+    OPE     NMO      LCA  SO     P     E   NM   OL  CA SO  PE N   MO
+          OPENMOLCA            SOPE   NMO        LCAS  O    P  ENMO
+     OPENMOLCASOPENMOLCASOPENMOLCASOPENMOLCA
+        OPENMOLCASOPENMOLCASOPENMOLCASOPE
+            OPENMOLCASOPENMOLCASOPENM
+               OPENMOLCASOPENMOLCA        version: 22.06
+                   OPENMOLCASO
+                       OPE                tag: 138-gae9642e6e-dirty
+
+ OpenMolcas is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 2.1.
+ OpenMolcas is distributed in the hope that it will be useful, but it
+ is provided "as is" and without any express or implied warranties.
+ For more details see the full text of the license in the file
+ LICENSE or in <http://www.gnu.org/licenses/>.
+
+                 Copyright (C) The OpenMolcas Authors
+           For the author list and the recommended citation,
+                   consult the file CONTRIBUTORS.md
+
+           *************************************************
+           * pymolcas version py2.23                       *
+           *   build d53e6f8e18683222a6e02cb84ce98eb3      *
+           *   (after the EMIL interpreter by V. Veryazov) *
+           *************************************************
+
+configuration info
+------------------
+Host name: gra-login1 (Linux)
+C Compiler ID: GNU
+C flags: -std=gnu99
+Fortran Compiler ID: GNU
+Fortran flags: -fno-aggressive-loop-optimizations -cpp -fdefault-integer-8 -fmax-stack-var-size=1048576
+Definitions: _MOLCAS_;_I8_;_LINUX_
+Parallel: OFF (GA=OFF)
+
+
+   -----------------------------------------------------------------------------------------------
+  |
+  |           Project: Li2_a
+  |    Submitted from: /home/nike/LEVEL/LEVEL_2022/test_suite/2013_Li2/OpenMOLCAS/OpenMOLCAS_level
+  |      Scratch area: /tmp/Li2_a
+  |   Save outputs to: /home/nike/LEVEL/LEVEL_2022/test_suite/2013_Li2/OpenMOLCAS/OpenMOLCAS_level
+  |            Molcas: /home/nike/build_OpenMolcas_HPQC_2022_10_31
+  |
+  | Scratch area is empty
+  |
+  |    MOLCAS_DRIVER = /home/nike/build_OpenMolcas_HPQC_2022_10_31/pymolcas
+  |    MOLCAS_NPROCS = 1
+  |    MOLCAS_SOURCE = /home/nike/OpenMolcas_HPQC
+  | MOLCAS_STRUCTURE = 0
+  |
+   -----------------------------------------------------------------------------------------------
+
+++ ---------   Input file   ---------
+
+&LEVEL
+  3  6  3  6 0 1
+  'MLR potential from 2013 Phys. Rev. A 87, 052505 but with Zimmerman datum added'
+  0.0005 0.125 1 5.0d0 2.d-10
+ -1 0 0 0.0d0
+  4 5 3 3 3 -1
+  3.337678701485D+02 4.170010583477D+00 8.0d0
+  3 -2 1 0.54d0
+  6  6.719000000d+06
+  8  1.126350000d+08
+ 10  2.786940000d+09
+
+ -5.156803528943D-01
+ -9.585070416286D-02
+  1.170797201140D-01
+ -2.282814434665D-02
+
+-999 1 2 0 0 1 3 0
+   0 0 0.d0
+
+-- ----------------------------------
+
+--- Start Module: level at Tue Nov  1 23:08:57 2022 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                               &LEVEL
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread?
+                                             pid: 4697
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+
+MLR potential from 2013 Phys. Rev. A 87, 052505 but with Zimmerman datum added
+================================================================================
+ Generate   ZMU=  3.00756139750(u)   &   BZ= 1.784095119D-01((1/cm-1)(1/Ang**2))
+          from atomic masses:   6.01512279500  &    6.01512279500(u)
+ Integrate from   Ymin= -0.9512000   to   Ymax= 1.0000  with mesh  YH=0.0000500
+     based on radial variable  yp(r;a)= (r^p - a^p)/(r^p + a^p)
+     for   p= 1.000    and   a= 5.000000
+ Range corresponds to   Rmin=  0.125 [Angst]    to    Rmax= infinity (!!)
+     and   RH= 0.0005000 [Angst]   at   R= 5.00000000
+
+ Potential #1 for Li(  6)-Li(  6)
+ ================================
+ State has  OMEGA= 0   and energy asymptote:   Y(lim)=      0.0000(cm-1)
+
+ MLR(n=6; p=5, q=3) Potential with:   De=   333.768[cm-1]    Re=  4.17001058[A]
+   with exponent coefficient   beta(r)= beta{INF}*y5 + [1-y5]*Sum{beta_i*y3^i}
+      exponent coefft. power series orders   3 for  R < Re  and   3 for  R > Re
+      and  4 coefficients: -5.15680353D-01 -9.58507042D-02  1.17079720D-01
+           -2.28281443D-02
+      with radial variables  y_p & y_q  defined w.r.t.  Rref= 8.0000000
+    uLR inverse-power terms incorporate DS-type damping with   rhoAB= 0.5400000
+        defined to give very short-range  Dm(r)*Cm/r^m  behaviour   r^{-1.0}
+        Dm(r)= [1 - exp(- 3.30(rhoAB*r)/m - 0.423(rhoAB*r)^2/sqrt{m})]^{m-1.0}
+   while  betaINF= -0.50990844  & uLR defined by  C6 = 6.719000D+06[cm-1 Ang^6]
+                                                  C8 = 1.126350D+08[cm-1 Ang^8]
+                                                  C10= 2.786940D+09[cm-1 Ang^10]
+ ----------------------------------------------------------------------------
+
+ Calculate properties of the single potential described above
+ Potential-1 uses inner boundary condition of  zero value  at  RMIN
+
+ Eigenvalue convergence criterion is   EPS= 2.0D-10(cm-1)
+ Airy function at 3-rd turning point is quasibound outer boundary condition
+
+ State-1 electronic angular momentum  OMEGA= 0
+         yields centrifugal potential  [J*(J+1) - 0.00]/r**2
+ For  J=  0, try to find the first 400 vibrational levels of Potential-1
+ Find  1  potential minima:   Vmin=   -333.768
+                   located at   y =   -0.09045
+ Find  1  potential maxima:   Vmax=      0.000
+                   located at   y =    0.99995
+
+ Solve for  v=  0   J=  0   ETRIAL= -1.9940990D+01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.9940990D+01  integration can't start till inside
+                     mesh point 31574 (yp=  0.6274),  so YMAX larger than needed
+  1 -1.9940990D+01  1.12D-03  5.45D+05  4.60D+00 24364  0.267 -3.2-164  3.4D-11    1 15123
+  2 -1.5340803D+01 -1.28D-03  4.03D+06 -7.13D-01 24758  0.287 -1.1-163  3.2D-11    1 15112
+  3 -1.6054005D+01 -2.80D-04  1.93D+06 -3.25D-01 24690  0.283 -7.3-164  1.7D-11    1 15114
+  4 -1.6379156D+01 -2.17D-05  1.54D+06 -3.16D-02 24660  0.282 -6.3-164  1.2D-11    1 15114
+  5 -1.6410719D+01 -1.54D-07  1.52D+06 -2.28D-04 24658  0.282 -6.3-164  1.2D-11    1 15114
+  6 -1.6410946D+01 -7.85D-12  1.52D+06 -1.16D-08 24658  0.282 -6.3-164  1.2D-11    1 15114
+  7 -1.6410946D+01  8.19D-15  1.52D+06  1.21D-11 24658  0.282 -6.3-164  1.2D-11    1 15114
+ ------------------------------------------------------------------------------------------------
+E(v=  7,J=  0)=   -16.41094650  7 iterations  yp(M)= 0.282  WF(NBEG)/WF(M)=-3.3-164   NBEG=11514
+                                        R(NEND)=    20.20   WF(NEND)/WF(M)= 2.2D-11   NEND=31088
+ Single well  ICOR= 1:  E(v=  7,J=  0)=    -16.41  v(SC)=   7.001  dGdv=  14.497
+
+ Solve for  v=  0   J=  0   ETRIAL= -1.1788665D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.1788665D+02  integration can't start till inside
+                     mesh point 27314 (yp=  0.4145),  so YMAX larger than needed
+  1 -1.1788665D+02  3.00D-03  3.74D+05  1.79D+01 21202  0.109  1.5-164  3.9D-11    1 15408
+  2 -9.9943497D+01  1.16D-03  2.95D+05  8.80D+00 21560  0.127  1.3-164  3.9D-11    1 15350
+  3 -9.1147165D+01 -1.12D-03  1.56D+06 -1.61D+00 21751  0.136  3.9-164  1.9D-10    1 15323
+  4 -9.2760568D+01 -2.22D-04  8.71D+05 -5.73D-01 21715  0.135  2.8-164  1.4D-10    1 15328
+  5 -9.3333178D+01 -1.32D-05  7.46D+05 -3.96D-02 21702  0.134  2.5-164  1.2D-10    1 15329
+  6 -9.3372765D+01 -5.22D-08  7.40D+05 -1.58D-04 21702  0.134  2.5-164  1.2D-10    1 15330
+  7 -9.3372923D+01 -8.27D-13  7.40D+05 -2.51D-09 21702  0.134  2.5-164  1.2D-10    1 15330
+  8 -9.3372923D+01  6.96D-15  7.40D+05  2.11D-11 21702  0.134  2.5-164  1.2D-10    1 15330
+ ------------------------------------------------------------------------------------------------
+E(v=  4,J=  0)=   -93.37292348  8 iterations  yp(M)= 0.134  WF(NBEG)/WF(M)= 1.6-164   NBEG=11560
+                                        R(NEND)=    11.79   WF(NEND)/WF(M)= 1.8D-10   NEND=27113
+ Single well  ICOR= 2:  E(v=  4,J=  0)=    -93.37  v(SC)=   4.000  dGdv=  36.829
+
+ Solve for  v=  0   J=  0   ETRIAL= -2.4068843D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -2.4068843D+02  integration can't start till inside
+                     mesh point 25244 (yp=  0.3110),  so YMAX larger than needed
+  1 -2.4068843D+02  5.79D-04  2.71D+05  4.80D+00 19244  0.011 -1.7-165  3.7D-11    1 15935
+  2 -2.3589066D+02 -1.61D-04  4.97D+05 -7.26D-01 19315  0.015 -2.7-165  3.6D-11    1 15907
+  3 -2.3661711D+02 -7.30D-06  4.42D+05 -3.71D-02 19304  0.014 -2.5-165  3.4D-11    1 15911
+  4 -2.3665416D+02 -1.64D-08  4.40D+05 -8.39D-05 19304  0.014 -2.5-165  3.4D-11    1 15912
+  5 -2.3665425D+02 -7.69D-14  4.40D+05 -3.92D-10 19304  0.014 -2.5-165  3.4D-11    1 15912
+  6 -2.3665425D+02  4.15D-16  4.40D+05  2.12D-12 19304  0.014 -2.5-165  3.4D-11    1 15912
+ ------------------------------------------------------------------------------------------------
+E(v=  1,J=  0)=  -236.65424824  6 iterations  yp(M)= 0.014  WF(NBEG)/WF(M)=-1.8-165   NBEG=11767
+                                        R(NEND)=     8.81   WF(NEND)/WF(M)= 4.6D-11   NEND=24544
+ Single well  ICOR= 3:  E(v=  1,J=  0)=   -236.65  v(SC)=   1.001  dGdv=  58.808
+
+ Solve for  v=  0   J=  0   ETRIAL= -2.9546197D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -2.9546197D+02  integration can't start till inside
+                     mesh point 24554 (yp=  0.2764),  so YMAX larger than needed
+  1 -2.9546197D+02 -8.62D-04  6.47D+05 -2.99D+00 18373 -0.033  1.0-165  3.5D-11    1 16343
+  2 -2.9844762D+02 -1.46D-04  3.75D+05 -8.76D-01 18319 -0.035  6.8-166  3.5D-11    1 16374
+  3 -2.9932412D+02 -6.20D-06  3.31D+05 -4.20D-02 18302 -0.036  6.1-166  3.3D-11    1 16384
+  4 -2.9936613D+02 -1.23D-08  3.30D+05 -8.33D-05 18302 -0.036  6.1-166  3.3D-11    1 16384
+  5 -2.9936621D+02 -4.49D-14  3.30D+05 -3.05D-10 18302 -0.036  6.1-166  3.3D-11    1 16384
+  6 -2.9936621D+02 -4.49D-16  3.30D+05 -3.05D-12 18302 -0.036  6.1-166  3.3D-11    1 16384
+ ------------------------------------------------------------------------------------------------
+E(v=  0,J=  0)=  -299.36620934  6 iterations  yp(M)=-0.036  WF(NBEG)/WF(M)= 4.7-166   NBEG=11902
+                                        R(NEND)=     8.10   WF(NEND)/WF(M)= 4.4D-11   NEND=23760
+ Single well  ICOR= 0:  E(v=  0,J=  0)=   -299.37  v(SC)=   0.001  dGdv=  66.161
+
+ Solve for  v=  1   J=  0   ETRIAL= -2.3320506D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -2.3320506D+02  integration can't start till inside
+                     mesh point 25344 (yp=  0.3160),  so YMAX larger than needed
+  1 -2.3320506D+02 -1.01D-03  8.89D+05 -2.56D+00 19355  0.017 -3.9-165  3.8D-11    1 15892
+  2 -2.3576191D+02 -1.91D-04  5.09D+05 -8.41D-01 19317  0.015 -2.7-165  3.7D-11    1 15906
+  3 -2.3660311D+02 -1.01D-05  4.42D+05 -5.10D-02 19304  0.014 -2.5-165  3.4D-11    1 15911
+  4 -2.3665409D+02 -3.12D-08  4.40D+05 -1.59D-04 19304  0.014 -2.5-165  3.4D-11    1 15912
+  5 -2.3665425D+02 -2.95D-13  4.40D+05 -1.51D-09 19304  0.014 -2.5-165  3.4D-11    1 15912
+  6 -2.3665425D+02 -1.81D-15  4.40D+05 -9.21D-12 19304  0.014 -2.5-165  3.4D-11    1 15912
+ ------------------------------------------------------------------------------------------------
+E(v=  1,J=  0)=  -236.65424824  6 iterations  yp(M)= 0.014  WF(NBEG)/WF(M)=-1.8-165   NBEG=11767
+                                        R(NEND)=     8.81   WF(NEND)/WF(M)= 4.6D-11   NEND=24544
+ Single well  ICOR= 0:  E(v=  1,J=  0)=   -236.65  v(SC)=   1.001  dGdv=  58.808
+
+ Solve for  v=  2   J=  0   ETRIAL= -1.8152324D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.8152324D+02  integration can't start till inside
+                     mesh point 26104 (yp=  0.3540),  so YMAX larger than needed
+  1 -1.8152324D+02 -2.72D-06  5.30D+05 -1.15D-02 20129  0.055  6.6-165  3.9D-11    1 15645
+  2 -1.8153474D+02 -2.24D-09  5.29D+05 -9.50D-06 20129  0.055  6.6-165  3.9D-11    1 15645
+  3 -1.8153475D+02 -1.06D-14  5.29D+05 -4.48D-11 20129  0.055  6.6-165  3.9D-11    1 15645
+ ------------------------------------------------------------------------------------------------
+E(v=  2,J=  0)=  -181.53475229  3 iterations  yp(M)= 0.055  WF(NBEG)/WF(M)= 4.6-165   NBEG=11675
+                                        R(NEND)=     9.61   WF(NEND)/WF(M)= 5.4D-11   NEND=25336
+ Single well  ICOR= 0:  E(v=  2,J=  0)=   -181.53  v(SC)=   2.001  dGdv=  51.375
+
+ Solve for  v=  3   J=  0   ETRIAL= -1.3387596D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.3387596D+02  integration can't start till inside
+                     mesh point 26974 (yp=  0.3974),  so YMAX larger than needed
+  1 -1.3387596D+02  2.10D-05  6.14D+05  7.66D-02 20909  0.094 -1.4-164  3.8D-11    1 15462
+  2 -1.3379931D+02 -1.35D-07  6.25D+05 -4.84D-04 20911  0.094 -1.4-164  3.8D-11    1 15462
+  3 -1.3379980D+02 -5.49D-12  6.25D+05 -1.97D-08 20911  0.094 -1.4-164  3.8D-11    1 15462
+  4 -1.3379980D+02 -1.29D-14  6.25D+05 -4.62D-11 20911  0.094 -1.4-164  3.8D-11    1 15462
+ ------------------------------------------------------------------------------------------------
+E(v=  3,J=  0)=  -133.79979747  4 iterations  yp(M)= 0.094  WF(NBEG)/WF(M)=-9.2-165   NBEG=11608
+                                        R(NEND)=    10.57   WF(NEND)/WF(M)= 5.4D-11   NEND=26179
+ Single well  ICOR= 0:  E(v=  3,J=  0)=   -133.80  v(SC)=   3.001  dGdv=  44.046
+
+ Solve for  v=  4   J=  0   ETRIAL= -9.3418771D+01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -9.3418771D+01  integration can't start till inside
+                     mesh point 27934 (yp=  0.4455),  so YMAX larger than needed
+  1 -9.3418771D+01  1.50D-05  7.31D+05  4.61D-02 21701  0.134  2.5-164  3.8D-11    1 15330
+  2 -9.3372714D+01 -6.90D-08  7.40D+05 -2.09D-04 21702  0.134  2.5-164  3.8D-11    1 15330
+  3 -9.3372923D+01 -1.43D-12  7.40D+05 -4.35D-09 21702  0.134  2.5-164  3.8D-11    1 15330
+  4 -9.3372923D+01 -1.70D-15  7.40D+05 -5.15D-12 21702  0.134  2.5-164  3.8D-11    1 15330
+ ------------------------------------------------------------------------------------------------
+E(v=  4,J=  0)=   -93.37292348  4 iterations  yp(M)= 0.134  WF(NBEG)/WF(M)= 1.6-164   NBEG=11560
+                                        R(NEND)=    11.79   WF(NEND)/WF(M)= 5.5D-11   NEND=27113
+ Single well  ICOR= 0:  E(v=  4,J=  0)=    -93.37  v(SC)=   4.000  dGdv=  36.829
+
+ Solve for  v=  5   J=  0   ETRIAL= -6.0152469D+01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -6.0152469D+01  integration can't start till inside
+                     mesh point 29044 (yp=  0.5010),  so YMAX larger than needed
+  1 -6.0152469D+01 -5.19D-05  9.28D+05 -1.25D-01 22549  0.176 -4.0-164  3.7D-11    1 15232
+  2 -6.0277869D+01 -8.01D-07  8.91D+05 -2.01D-03 22545  0.176 -3.9-164  3.9D-11    1 15232
+  3 -6.0279884D+01 -1.97D-10  8.91D+05 -4.96D-07 22545  0.176 -3.9-164  3.9D-11    1 15232
+  4 -6.0279884D+01 -1.14D-14  8.91D+05 -2.86D-11 22545  0.176 -3.9-164  3.9D-11    1 15232
+ ------------------------------------------------------------------------------------------------
+E(v=  5,J=  0)=   -60.27988434  4 iterations  yp(M)= 0.176  WF(NBEG)/WF(M)=-2.3-164   NBEG=11529
+                                        R(NEND)=    13.46   WF(NEND)/WF(M)= 5.9D-11   NEND=28188
+ Single well  ICOR= 0:  E(v=  5,J=  0)=    -60.28  v(SC)=   5.000  dGdv=  29.432
+
+ Solve for  v=  6   J=  0   ETRIAL= -3.4545995D+01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -3.4545995D+01  integration can't start till inside
+                     mesh point 30354 (yp=  0.5665),  so YMAX larger than needed
+  1 -3.4545995D+01 -3.08D-05  1.15D+06 -6.04D-02 23501  0.224  5.3-164  3.7D-11    1 15162
+  2 -3.4606345D+01 -2.94D-07  1.12D+06 -5.91D-04 23498  0.224  5.2-164  3.6D-11    1 15162
+  3 -3.4606936D+01 -2.74D-11  1.12D+06 -5.50D-08 23498  0.224  5.2-164  3.6D-11    1 15162
+  4 -3.4606936D+01  8.24D-15  1.12D+06  1.65D-11 23498  0.224  5.2-164  3.6D-11    1 15162
+ ------------------------------------------------------------------------------------------------
+E(v=  6,J=  0)=   -34.60693642  4 iterations  yp(M)= 0.224  WF(NBEG)/WF(M)= 3.0-164   NBEG=11513
+                                        R(NEND)=    15.94   WF(NEND)/WF(M)= 5.9D-11   NEND=29476
+ Single well  ICOR= 0:  E(v=  6,J=  0)=    -34.61  v(SC)=   6.000  dGdv=  21.970
+
+ Solve for  v=  7   J=  0   ETRIAL= -1.6367701D+01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.6367701D+01  integration can't start till inside
+                     mesh point 31984 (yp=  0.6480),  so YMAX larger than needed
+  1 -1.6367701D+01 -2.97D-05  1.56D+06 -4.28D-02 24662  0.282 -6.4-164  3.4D-11    1 15114
+  2 -1.6410522D+01 -2.87D-07  1.52D+06 -4.24D-04 24658  0.282 -6.3-164  3.3D-11    1 15114
+  3 -1.6410946D+01 -2.72D-11  1.52D+06 -4.02D-08 24658  0.282 -6.3-164  3.3D-11    1 15114
+  4 -1.6410946D+01  6.85D-15  1.52D+06  1.01D-11 24658  0.282 -6.3-164  3.3D-11    1 15114
+ ------------------------------------------------------------------------------------------------
+E(v=  7,J=  0)=   -16.41094650  4 iterations  yp(M)= 0.282  WF(NBEG)/WF(M)=-3.3-164   NBEG=11514
+                                        R(NEND)=    20.20   WF(NEND)/WF(M)= 6.0D-11   NEND=31088
+ Single well  ICOR= 0:  E(v=  7,J=  0)=    -16.41  v(SC)=   7.001  dGdv=  14.497
+
+ Solve for  v=  8   J=  0   ETRIAL= -5.6512682D+00  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -5.6512682D+00  integration can't start till inside
+                     mesh point 33994 (yp=  0.7484),  so YMAX larger than needed
+  1 -5.6512682D+00  1.63D-04  2.05D+06  1.77D-01 26184  0.358  5.9-164  2.7D-11    1 15087
+  2 -5.4738379D+00 -1.07D-05  2.47D+06 -9.68D-03 26228  0.360  6.6-164  2.8D-11    1 15087
+  3 -5.4835225D+00 -4.02D-08  2.45D+06 -3.68D-05 26226  0.360  6.6-164  2.7D-11    1 15087
+  4 -5.4835593D+00 -5.67D-13  2.45D+06 -5.19D-10 26226  0.360  6.6-164  2.7D-11    1 15087
+  5 -5.4835593D+00 -6.54D-15  2.45D+06 -5.99D-12 26226  0.360  6.6-164  2.7D-11    1 15087
+ ------------------------------------------------------------------------------------------------
+E(v=  8,J=  0)=    -5.48355933  5 iterations  yp(M)= 0.360  WF(NBEG)/WF(M)= 3.1-164   NBEG=11540
+                                        R(NEND)=    29.22   WF(NEND)/WF(M)= 6.0D-11   NEND=33181
+ Single well  ICOR= 0:  E(v=  8,J=  0)=     -5.48  v(SC)=   8.003  dGdv=   7.526
+
+ Solve for  v=  9   J=  0   ETRIAL= -1.4423218D+00  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.4423218D+00  integration can't start till inside
+                     mesh point 35954 (yp=  0.8465),  so YMAX larger than needed
+  1 -1.4423218D+00  7.33D-04  2.11D+06  7.78D-01 28006  0.449 -3.2-164  2.1D-11    1 15077
+  2 -6.6481469D-01 -7.61D-04  1.55D+07 -1.10D-01 28975  0.498 -1.1-163  1.8D-11    1 15075
+  3 -7.7467440D-01 -1.27D-04  7.44D+06 -3.84D-02 28788  0.488 -6.8-164  2.5D-12    1 15075
+  4 -8.1310620D-01 -5.67D-06  6.30D+06 -2.02D-03 28728  0.485 -6.1-164  1.3D-12    1 15075
+  5 -8.1512201D-01 -1.25D-08  6.25D+06 -4.49D-06 28725  0.485 -6.1-164  1.2D-12    1 15075
+  6 -8.1512650D-01 -5.82D-14  6.25D+06 -2.09D-11 28725  0.485 -6.1-164  1.2D-12    1 15075
+ ------------------------------------------------------------------------------------------------
+E(v=  9,J=  0)=    -0.81512650  6 iterations  yp(M)= 0.485  WF(NBEG)/WF(M)=-2.3-164   NBEG=11607
+                                        R(NEND)=    59.10   WF(NEND)/WF(M)= 4.1D-12   NEND=35905
+ Single well  ICOR= 0:  E(v=  9,J=  0)=     -0.82  v(SC)=   9.009  dGdv=   2.204
+
+ Solve for  v= 10   J=  0   ETRIAL= -1.1022029D-01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.1022029D-01  integration can't start till inside
+                     mesh point 37984 (yp=  0.9479),  so YMAX larger than needed
+  1 -1.1022029D-01  7.95D-04  8.33D+06  2.14D-01 31019  0.600  2.8-164  1.1D-11    1 15074
+ For J=  0  ETRY=     0.1037 > VMAX=***********  find onee turn point:  R=  3.35
+ For J=  0  ETRY=*********** > VMAX=     0.0000  find onee turn point:  R=  0.12
+
+ Seek highest bound level:   ETRIAL =-1.00D-04                 WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.0000000D-04  integration can't start till inside
+                     mesh point 38994 (yp=  0.9984),  so YMAX larger than needed
+  1 -1.0000000D-04  1.34D-04  1.50D+09  2.01D-04 36118  0.855  5.1-164  5.1D-14    1 15073
+  2 -2.0000000D-04  1.51D-04  8.94D+08  3.80D-04 35791  0.838  4.6-164  2.5D-12    1 15073
+  3 -4.0000000D-04  1.74D-04  5.36D+08  7.28D-04 35431  0.820  4.1-164  1.8D-16    1 15073
+  4 -8.0000000D-04  2.02D-04  3.22D+08  1.41D-03 35036  0.801  3.7-164  2.7D-22    1 15073
+  5 -1.6000000D-03  2.38D-04  1.94D+08  2.75D-03 34603  0.779  3.3-164  1.5D-30    1 15073
+  6 -3.2000000D-03  2.81D-04  1.16D+08  5.43D-03 34130  0.755  3.0-164  3.0D-42    1 15073
+  7 -6.4000000D-03  3.36D-04  6.96D+07  1.08D-02 33615  0.729  2.8-164  4.8D-59    1 15073
+  8 -1.2800000D-02  4.04D-04  4.15D+07  2.18D-02 33055  0.702  2.5-164  1.6D-77    1 15073
+  9 -2.5600000D-02  4.90D-04  2.47D+07  4.45D-02 32449  0.671  2.4-164  5.7D-91    1 15073
+ 10 -5.1200000D-02  6.04D-04  1.46D+07  9.26D-02 31796  0.639  2.4-164  1.2-108    1 15074
+ 11 -1.0240000D-01  7.72D-04  8.78D+06  1.97D-01 31096  0.604  2.7-164  1.7-128    1 15074
+ 12 -2.0480000D-01  1.08D-03  5.87D+06  4.14D-01 30349  0.566  3.8-164  1.9-153    1 15074
+ 13 -4.0960000D-01  2.76D-03  2.16D+07  2.86D-01 29556  0.527  1.4-163  8.8-182    1 15074
+ 14 -1.2341505D-01  8.34D-04  7.71D+06  2.42D-01 30899  0.594  2.9-164  1.2D-98    1 15074
+ 15 -2.4683010D-01  1.24D-03  5.78D+06  4.82D-01 30140  0.556  4.6-164  1.9-139    1 15074
+ *** CAUTION for  v=999  J=  0  SCHRQ doesn't converge by  ITER=15  DE= 4.82D-01
+
+ *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.000
+     Check range and/or contact    . Nike Dattani [nike@hpqc.org,ndattani@uwaterloo.ca]
+
+ Solve for  v=  0   J=  0   ETRIAL= -2.9936621D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -2.9936621D+02  integration can't start till inside
+                     mesh point 24504 (yp=  0.2740),  so YMAX larger than needed
+  1 -2.9936621D+02 -1.78D-15  3.30D+05 -1.21D-11 18302 -0.036  6.1-166  3.5D-11    1 16384
+ ------------------------------------------------------------------------------------------------
+E(v=  0,J=  0)=  -299.36620934  1 iterations  yp(M)=-0.036  WF(NBEG)/WF(M)= 4.7-166   NBEG=11902
+                                        R(NEND)=     8.10   WF(NEND)/WF(M)= 4.8D-11   NEND=23760
+ E(v=  0, J=  0)=  -299.366   Bv=  0.3103993  -Dv= -2.7416D-05   Hv= -1.7537D-09
+           Lv= -4.1189D-13   Mv= -1.1683D-16   Nv= -4.2039D-20   Ov= -1.7002D-23
+
+ Solve for  v=  1   J=  0   ETRIAL= -2.3665425D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -2.3665425D+02  integration can't start till inside
+                     mesh point 25294 (yp=  0.3135),  so YMAX larger than needed
+  1 -2.3665425D+02 -1.81D-15  4.40D+05 -9.21D-12 19304  0.014 -2.5-165  3.9D-11    1 15912
+ ------------------------------------------------------------------------------------------------
+E(v=  1,J=  0)=  -236.65424824  1 iterations  yp(M)= 0.014  WF(NBEG)/WF(M)=-1.8-165   NBEG=11767
+                                        R(NEND)=     8.81   WF(NEND)/WF(M)= 5.3D-11   NEND=24544
+ E(v=  1, J=  0)=  -236.654   Bv=  0.2867374  -Dv= -2.8730D-05   Hv= -2.2377D-09
+           Lv= -6.7067D-13   Mv= -2.5262D-16   Nv= -1.1300D-19   Ov= -5.5128D-23
+
+ Solve for  v=  2   J=  0   ETRIAL= -1.8153475D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.8153475D+02  integration can't start till inside
+                     mesh point 26104 (yp=  0.3540),  so YMAX larger than needed
+  1 -1.8153475D+02 -1.06D-14  5.29D+05 -4.48D-11 20129  0.055  6.6-165  3.9D-11    1 15645
+ ------------------------------------------------------------------------------------------------
+E(v=  2,J=  0)=  -181.53475229  1 iterations  yp(M)= 0.055  WF(NBEG)/WF(M)= 4.6-165   NBEG=11675
+                                        R(NEND)=     9.61   WF(NEND)/WF(M)= 5.4D-11   NEND=25336
+ E(v=  2, J=  0)=  -181.535   Bv=  0.2630997  -Dv= -3.0567D-05   Hv= -3.1594D-09
+           Lv= -1.2058D-12   Mv= -5.6819D-16   Nv= -3.0838D-19   Ov= -1.8239D-22
+
+ Solve for  v=  3   J=  0   ETRIAL= -1.3379980D+02  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.3379980D+02  integration can't start till inside
+                     mesh point 26974 (yp=  0.3974),  so YMAX larger than needed
+  1 -1.3379980D+02 -1.29D-14  6.25D+05 -4.62D-11 20911  0.094 -1.4-164  3.8D-11    1 15462
+ ------------------------------------------------------------------------------------------------
+E(v=  3,J=  0)=  -133.79979747  1 iterations  yp(M)= 0.094  WF(NBEG)/WF(M)=-9.2-165   NBEG=11608
+                                        R(NEND)=    10.57   WF(NEND)/WF(M)= 5.4D-11   NEND=26179
+ E(v=  3, J=  0)=  -133.800   Bv=  0.2390465  -Dv= -3.3325D-05   Hv= -4.8382D-09
+           Lv= -2.3235D-12   Mv= -1.3638D-15   Nv= -9.1599D-19   Ov= -6.7174D-22
+
+ Solve for  v=  4   J=  0   ETRIAL= -9.3372923D+01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -9.3372923D+01  integration can't start till inside
+                     mesh point 27934 (yp=  0.4455),  so YMAX larger than needed
+  1 -9.3372923D+01 -1.70D-15  7.40D+05 -5.15D-12 21702  0.134  2.5-164  3.8D-11    1 15330
+ ------------------------------------------------------------------------------------------------
+E(v=  4,J=  0)=   -93.37292348  1 iterations  yp(M)= 0.134  WF(NBEG)/WF(M)= 1.6-164   NBEG=11560
+                                        R(NEND)=    11.79   WF(NEND)/WF(M)= 5.5D-11   NEND=27113
+ E(v=  4, J=  0)=   -93.373   Bv=  0.2140251  -Dv= -3.7594D-05   Hv= -7.9531D-09
+           Lv= -4.8584D-12   Mv= -3.6450D-15   Nv= -3.1336D-18   Ov= -2.9495D-21
+
+ Solve for  v=  5   J=  0   ETRIAL= -6.0279884D+01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -6.0279884D+01  integration can't start till inside
+                     mesh point 29034 (yp=  0.5004),  so YMAX larger than needed
+  1 -6.0279884D+01 -1.14D-14  8.91D+05 -2.86D-11 22545  0.176 -3.9-164  3.9D-11    1 15232
+ ------------------------------------------------------------------------------------------------
+E(v=  5,J=  0)=   -60.27988434  1 iterations  yp(M)= 0.176  WF(NBEG)/WF(M)=-2.3-164   NBEG=11529
+                                        R(NEND)=    13.46   WF(NEND)/WF(M)= 5.9D-11   NEND=28188
+ E(v=  5, J=  0)=   -60.280   Bv=  0.1873331  -Dv= -4.4397D-05   Hv= -1.4129D-08
+           Lv= -1.1391D-11   Mv= -1.1445D-14   Nv= -1.3256D-17   Ov= -1.6898D-20
+
+ Solve for  v=  6   J=  0   ETRIAL= -3.4606936D+01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -3.4606936D+01  integration can't start till inside
+                     mesh point 30354 (yp=  0.5665),  so YMAX larger than needed
+  1 -3.4606936D+01  8.24D-15  1.12D+06  1.65D-11 23498  0.224  5.2-164  3.6D-11    1 15162
+ ------------------------------------------------------------------------------------------------
+E(v=  6,J=  0)=   -34.60693642  1 iterations  yp(M)= 0.224  WF(NBEG)/WF(M)= 3.0-164   NBEG=11513
+                                        R(NEND)=    15.94   WF(NEND)/WF(M)= 5.9D-11   NEND=29476
+ E(v=  6, J=  0)=   -34.607   Bv=  0.1580557  -Dv= -5.5700D-05   Hv= -2.7783D-08
+           Lv= -3.1617D-11   Mv= -4.5919D-14   Nv= -7.7791D-17   Ov= -1.4624D-19
+
+ Solve for  v=  7   J=  0   ETRIAL= -1.6410946D+01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -1.6410946D+01  integration can't start till inside
+                     mesh point 31984 (yp=  0.6480),  so YMAX larger than needed
+  1 -1.6410946D+01  6.85D-15  1.52D+06  1.01D-11 24658  0.282 -6.3-164  3.3D-11    1 15114
+ ------------------------------------------------------------------------------------------------
+E(v=  7,J=  0)=   -16.41094650  1 iterations  yp(M)= 0.282  WF(NBEG)/WF(M)=-3.3-164   NBEG=11514
+                                        R(NEND)=    20.20   WF(NEND)/WF(M)= 6.0D-11   NEND=31088
+ E(v=  7, J=  0)=   -16.411   Bv=  0.1250607  -Dv= -7.5616D-05   Hv= -6.3419D-08
+           Lv= -1.1510D-10   Mv= -2.7687D-13   Nv= -7.9049D-16   Ov= -2.5275D-18
+
+ Solve for  v=  8   J=  0   ETRIAL= -5.4835593D+00  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -5.4835593D+00  integration can't start till inside
+                     mesh point 34044 (yp=  0.7510),  so YMAX larger than needed
+  1 -5.4835593D+00 -6.54D-15  2.45D+06 -5.99D-12 26226  0.360  6.6-164  2.7D-11    1 15087
+ ------------------------------------------------------------------------------------------------
+E(v=  8,J=  0)=    -5.48355933  1 iterations  yp(M)= 0.360  WF(NBEG)/WF(M)= 3.1-164   NBEG=11540
+                                        R(NEND)=    29.22   WF(NEND)/WF(M)= 6.0D-11   NEND=33181
+ E(v=  8, J=  0)=    -5.484   Bv=  0.0873989  -Dv= -1.1387D-04   Hv= -1.8991D-07
+           Lv= -7.1400D-10   Mv= -3.7287D-12   Nv= -2.3402D-14   Ov= -1.6517D-16
+
+ Solve for  v=  9   J=  0   ETRIAL= -8.1512650D-01  INNER= 0   WF(1st)  WF(NEND)
+ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
+ ------------------------------------------------------------------------------------------------
+ *** For  J=  0   E= -8.1512650D-01  integration can't start till inside
+                     mesh point 36574 (yp=  0.8774),  so YMAX larger than needed
+  1 -8.1512650D-01 -5.73D-14  6.25D+06 -2.06D-11 28725  0.485 -6.1-164  1.8D-11    1 15075
+ ------------------------------------------------------------------------------------------------
+E(v=  9,J=  0)=    -0.81512650  1 iterations  yp(M)= 0.485  WF(NBEG)/WF(M)=-2.3-164   NBEG=11607
+                                        R(NEND)=    59.10   WF(NEND)/WF(M)= 6.0D-11   NEND=35905
+ E(v=  9, J=  0)= -0.8151265  Bv= 4.5824D-02  -Dv= -2.1064D-04   Hv= -1.2626D-06
+           Lv= -1.9140D-08   Mv= -4.0463D-10   Nv= -1.0189D-11   Ov= -2.8625D-13
+
+ Find  10 Potential-1 vibrational levels with  J=  0
+     v     E(v)        v     E(v)        v     E(v)        v     E(v)   
+    --------------    --------------    --------------    --------------
+     0   -299.3662     3   -133.7998     6    -34.6069     9     -0.8151
+     1   -236.6542     4    -93.3729     7    -16.4109
+     2   -181.5348     5    -60.2799     8     -5.4836
+
+ An  n= 6  N-D theory extrapolation from last 2 levels implies   vD =  10.126
+ ===============================================================================
+
+
+
+
+--- Stop Module: level at Tue Nov  1 23:08:58 2022 /rc=2 ---
+*** files: xmldump
+    saved to directory /home/nike/LEVEL/LEVEL_2022/test_suite/2013_Li2/OpenMOLCAS/OpenMOLCAS_level
+
+.########################.
+.# Non-zero return code #.
+.########################.
+
+    Timing: Wall=0.15 User=0.08 System=0.02
