@@ -1,9 +1,9 @@
 # option to select compiler (intel 'ifort', or SUN 'f77', 'f90 or f95)
 #   as in :   make FC=ifort
 ifndef $FC
-#FC = gfortran
-   FC = ifort 
-#   FC = f90    
+#FC=gfortran
+ FC=ifort 
+# FC=f90    
 endif
 #
 #option to choose level of optimization:  make DEBUG=1
