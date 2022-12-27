@@ -5903,6 +5903,12 @@ c** For the 'regular' simple inverse-power sum case.
               BETA= (ULR/ULRe)*DEXP(-BETA*ZZ)
               VV(I)= DSCM*(1.d0 - BETA)**2 - DSCM + VLIM
               ENDDO
+              WRITE(6,*) 'Finished MLR generation. First/last V(R):'
+              DO I=1,3
+               WRITE(6,*) 'V(',I,')=',VV(I)
+              ENDDO
+              WRITE(6,*) 'V(                 20000)=',VV(20000)
+              WRITE(6,*) 'V(',NPP,')=',VV(NPP)
           ENDIF
 c
 c=======================================================================
