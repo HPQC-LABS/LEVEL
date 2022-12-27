@@ -1,0 +1,379 @@
+   This run of MOLCAS is using the pymolcas driver
+
+                             OPE
+                             OPE          NMOL  CASOP  ENMOLC A   SO
+                 OPE        NMOLC        AS  OP EN  MO LC     AS  OP
+                OPENM       OL CA        SO  PE NM  OL CA     SOP EN
+                OP EN      MO   LC       AS  OP ENMOL  CASO   PENMOL
+                OP  EN     MO   LC       AS  OP EN     MO     LC ASO
+               OP   E  NMOL  C  AS       OP  EN MO     LC     AS  OP
+               OP  E   NMO   LC AS        OPEN  MO     LCASOP EN   M
+               O  PEN   MO  LCA  SO
+            OPE   NMO   L   CAS    OP
+        OPENMOL  CASOP     ENMOL   CASOPE
+     OPENMOLCA   SOPENMOLCASOPEN   MOLCASOPE
+    OPENMOLCAS   OP           EN   MOL    CAS
+    OPENMOLCAS       OP  ENM        O     LCA
+    OPENMOLCAS    OPEN  MOLCASO     P  E  NMO
+    OPENMOLCAS     OP               E  N  MOL
+    OPENMOLCA   SO           PENM   O  L  CAS    OPEN    MO    LCAS
+    OPENMOLCA   SOP           ENM   O  L  CAS   OP  EN  MOLC  AS   O
+    OPENMOLCA   SOPE           NM      O  LCA   S      OP  EN MO
+    OPENMOLC                AS         O  PEN   M      OL  CA  SOPE
+    OPENMO        LCASOPE  NMOL        C  ASO   P      ENMOLC     AS
+    OPE     NMO      LCA  SO     P     E   NM   OL  CA SO  PE N   MO
+          OPENMOLCA            SOPE   NMO        LCAS  O    P  ENMO
+     OPENMOLCASOPENMOLCASOPENMOLCASOPENMOLCA
+        OPENMOLCASOPENMOLCASOPENMOLCASOPE
+            OPENMOLCASOPENMOLCASOPENM
+               OPENMOLCASOPENMOLCA        version: 22.10
+                   OPENMOLCASO
+                       OPE                tag: 449-ga124b5702-dirty
+
+ OpenMolcas is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 2.1.
+ OpenMolcas is distributed in the hope that it will be useful, but it
+ is provided "as is" and without any express or implied warranties.
+ For more details see the full text of the license in the file
+ LICENSE or in <http://www.gnu.org/licenses/>.
+
+                 Copyright (C) The OpenMolcas Authors
+           For the author list and the recommended citation,
+                   consult the file CONTRIBUTORS.md
+
+           *************************************************
+           * pymolcas version py2.23                       *
+           *   build d53e6f8e18683222a6e02cb84ce98eb3      *
+           *   (after the EMIL interpreter by V. Veryazov) *
+           *************************************************
+
+configuration info
+------------------
+Host name: cedar1.cedar.computecanada.ca (Linux)
+C Compiler ID: GNU
+C flags: -std=gnu99
+Fortran Compiler ID: GNU
+Fortran flags: -fno-aggressive-loop-optimizations -cpp -fdefault-integer-8 -fmax-stack-var-size=1048576
+Definitions: _MOLCAS_;_I8_;_LINUX_
+Parallel: OFF (GA=OFF)
+
+
+   ------------------------------------------------------------------------------
+  |
+  |           Project: 016_Ang_cm-1
+  |    Submitted from: /home/nike/LEVEL/LEVEL_2022/test_suite/OMolcas_H2
+  |      Scratch area: /tmp/016_Ang_cm-1
+  |   Save outputs to: /home/nike/LEVEL/LEVEL_2022/test_suite/OMolcas_H2
+  |            Molcas: /home/nike/build_OpenMolcas_Deyan_Unit_Conversion
+  |
+  | Scratch area is NOT empty
+  |
+  |    MOLCAS_DRIVER = /home/nike/build_OpenMolcas_Deyan_Unit_Conversion/pymolcas
+  |    MOLCAS_NPROCS = 1
+  |    MOLCAS_SOURCE = /home/nike/OpenMolcas_Deyan_unit_conversion
+  | MOLCAS_STRUCTURE = 0
+  |
+   ------------------------------------------------------------------------------
+
+++ ---------   Input file   ---------
+
+&VIBROT
+  RoVibrational spectrum
+  Title = H2 (^1 Pi_u)
+  Atoms = 0 H 0 H
+  Potential
+    0.4233417991952784    -93390.8116364055
+    0.5291772489940979   -125520.5784258792
+    0.5820949738935077   -135202.0740308874
+    0.6350126987929174   -142230.7885620708
+    0.6879304236923273   -147325.2117261678
+    0.7408481485917370   -150985.4845047687
+    0.7937658734911469   -153567.9481018878
+    0.8466835983905567   -155331.6637865382
+    0.8996013232899664   -156468.2460791877
+    0.9525190481893763   -157121.6176632051
+    1.0054367730887860   -157401.2568735270
+    1.0583544979881960   -157391.4024626400
+    1.1112722228876060   -157157.4776230008
+    1.1641899477870150   -156750.6989542662
+    1.2700253975858350   -155571.7997582064
+    1.4816962971834740   -152450.7563927988
+    1.6933671967811130   -149070.0021134733
+    1.9050380963787530   -145873.2312217305
+    2.1167089959763920   -143043.6172437684
+    2.6458862449704900   -137805.7761879516
+    3.1750634939645880   -134764.6588985511
+    5.2917724899409790   -131360.0872323780
+  DistUnit = Angstrom
+  EnerUnit = cm-1
+  Grid = 450
+  Range = 0.4 5.0
+  Vibrations = 3
+  Rotations = 1 4
+  Orbital = 1
+  Observable
+    Dipole Moment
+    0.4233417991952784           0.57938359
+    0.5291772489940979           0.62852037
+    0.5820949738935077           0.65216622
+    0.6350126987929174           0.67506184
+    0.6879304236923273           0.69709869
+    0.7408481485917370           0.71821433
+    0.7937658734911469           0.73833904
+    0.8466835983905567           0.75741713
+    0.8996013232899664           0.77538706
+    0.9525190481893763           0.79219774
+    1.0054367730887860           0.80778988
+    1.0583544979881960           0.82211035
+    1.1112722228876060           0.83510594
+    1.1641899477870150           0.84672733
+    1.2700253975858350           0.86565481
+    1.4816962971834740           0.88532063
+    1.6933671967811130           0.88056207
+    1.9050380963787530           0.85474708
+    2.1167089959763920           0.81515210
+    2.6458862449704900           0.70549066
+    3.1750634939645880           0.62103112
+    5.2917724899409790           0.46501146
+  Plot  = 1.0 10.0 0.1
+  Scale
+
+-- ----------------------------------
+
+--- Start Module: vibrot at Tue Dec 27 10:12:46 2022 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &VIBROT
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread?
+                                             pid: 45997
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+
+ Vibration-Rotation spectrum for the HH   molecule.
+ H2 (^1 Pi_u)                                                                    
+
+ Rotational quantum number range   1  4
+ Electronic angular momentum       1
+ Vibrational quantum number range  0  2
+ Mass of atom   1 H     1837.152647 au
+ Mass of atom   1 H     1837.152647 au
+ Reduced mass            918.576324 au
+
+ Statistics for numerical integration
+ Number of steps           449
+ Step length               0.005638
+ Radial integration range  0.400000  5.000000 au
+ logarithmic range        -0.916291  1.609438
+
+ Spectroscopic constants will be computed
+ Matrix elements of  1 operators will be computed
+
+ Distance provided in units of Angstroms.
+ Converting to Bohr radii.
+
+ Energy provided in units of cm^(-1).
+ Converting to hartrees.
+
+ Potential read from input
+       R(au)     E(au)
+     0.800000   -0.425520
+     1.000000   -0.571914
+     1.100000   -0.616026
+     1.200000   -0.648051
+     1.300000   -0.671263
+     1.400000   -0.687940
+     1.500000   -0.699707
+     1.600000   -0.707743
+     1.700000   -0.712922
+     1.800000   -0.715899
+     1.900000   -0.717173
+     2.000000   -0.717128
+     2.100000   -0.716062
+     2.200000   -0.714209
+     2.400000   -0.708837
+     2.800000   -0.694617
+     3.200000   -0.679213
+     3.600000   -0.664647
+     4.000000   -0.651755
+     5.000000   -0.627889
+     6.000000   -0.614033
+    10.000001   -0.598521
+ Generating plot file:VIBPLT0 
+
+ Scaling parameter for potential:    0.842799
+
+ extremum points
+                        R(au)         Value
+ Min point         1.945079     -0.717296
+ Extrapolated value at infinity    -0.596055
+ Generating plot file:VIBPLT1 
+
+ Input data for observables
+
+       Dipole Moment     
+     R(au)        Value
+    0.8000      0.579384
+    1.0000      0.628520
+    1.1000      0.652166
+    1.2000      0.675062
+    1.3000      0.697099
+    1.4000      0.718214
+    1.5000      0.738339
+    1.6000      0.757417
+    1.7000      0.775387
+    1.8000      0.792198
+    1.9000      0.807790
+    2.0000      0.822110
+    2.1000      0.835106
+    2.2000      0.846727
+    2.4000      0.865655
+    2.8000      0.885321
+    3.2000      0.880562
+    3.6000      0.854747
+    4.0000      0.815152
+    5.0000      0.705491
+    6.0000      0.621031
+   10.0000      0.465011
+     Plot file
+  Interpolated value at equilibrium for state 1:
+    1.9451      0.814406
+
+
+ Eigenstates
+
+  Vib. q.n.   Rot. q.n.    Energy
+      0           1      0.004825
+      1           1      0.013816
+      2           1      0.022314
+      0           2      0.005296
+      1           2      0.014263
+      2           2      0.022739
+      0           3      0.005998
+      1           3      0.014930
+      2           3      0.023372
+      0           4      0.006926
+      1           4      0.015812
+      2           4      0.024209
+
+     Rotational constants for vibrational quantum number  0
+     B= 0.259092E+02 cm-1     D= 0.165459E-01 cm-1
+     Observed and computed term values (cm-1)
+       2        0.103375E+03        0.103372E+03        0.316681E-02
+       3        0.257435E+03        0.257437E+03       -0.221677E-02
+       4        0.461005E+03        0.461004E+03        0.527801E-03
+
+     Rotational constants for vibrational quantum number  1
+     B= 0.246201E+02 cm-1     D= 0.158922E-01 cm-1
+     Observed and computed term values (cm-1)
+       2        0.982291E+02        0.982260E+02        0.308172E-02
+       3        0.244609E+03        0.244612E+03       -0.215720E-02
+       4        0.438013E+03        0.438012E+03        0.513620E-03
+
+     Rotational constants for vibrational quantum number  2
+     B= 0.233754E+02 cm-1     D= 0.152755E-01 cm-1
+     Observed and computed term values (cm-1)
+       2        0.932603E+02        0.932573E+02        0.298831E-02
+       3        0.232225E+03        0.232227E+03       -0.209181E-02
+       4        0.415809E+03        0.415809E+03        0.498051E-03
+
+     Rotational constants B(nv) and D(nv) in cm-1
+       1        0.259092E+02        0.165459E-01
+       2        0.246201E+02        0.158922E-01
+       3        0.233754E+02        0.152755E-01
+
+     Spectroscopic constants De= 0.168574E-01 cm-1  Betae=-0.635213E-03 cm-1
+     Observed and computed D values
+       0        0.165459E-01        0.165398E-01        0.618691E-05
+       1        0.158922E-01        0.159045E-01       -0.123738E-04
+       2        0.152755E-01        0.152693E-01        0.618691E-05
+
+     Spectroscopic constants Be,Alphae and Gammae
+     Be= 0.265704E+02 cm-1    Alphae= 0.133359E+01 cm-1    Gammae= 0.222401E-01
+     Observed and computed B values
+       0        0.259092E+02        0.259092E+02       -0.532907E-13
+       1        0.246201E+02        0.246201E+02       -0.145661E-12
+       2        0.233754E+02        0.233754E+02       -0.294875E-12
+
+     Vibrational constants we  = 0.217901E+04 cm-1
+                           wexe=-0.130530E+03 cm-1
+                           weye= 0.170036E+02 cm-1
+     Observed and computed band origins
+       0        0.105900E+04        0.105900E+04       -0.488853E-10
+       1        0.303222E+04        0.303222E+04       -0.478394E-09
+       2        0.489741E+04        0.489741E+04       -0.121508E-08
+
+
+     Spectroscopic constants for H H 
+
+
+     Range of J-values used in fit  1  4
+     Range of v-values used in fit  0  2
+
+
+
+     Re(a)                 1.0293
+     De(ev)                2.7805
+     D0(ev)                2.6492
+     we(cm-1)        0.217901E+04
+     wexe(cm-1)     -0.130530E+03
+     weye(cm-1)      0.170036E+02
+     Be(cm-1)        0.265704E+02
+     Alphae(cm-1)    0.133359E+01
+     Gammae(cm-1)    0.222401E-01
+     Dele(cm-1)      0.168574E-01
+     Betae(cm-1)    -0.635213E-03
+
+
+     Max deviation in term values is  0.52E+02 cm(-1)
+
+
+     Term values(observed and computed) in cm(-1)
+
+ J-value         1                     2                     3                     4
+
+ v-value
+     0   1059.00   1110.75     1162.38   1213.86     1316.44   1367.53     1520.01   1570.57
+     1   3032.22   3081.39     3130.45   3179.36     3276.83   3325.37     3470.23   3518.26
+     2   4897.41   4944.10     4990.67   5037.11     5129.63   5175.71     5313.21   5358.81
+
+
+     observed G-values in cm(-1)
+
+     v      G(v)     deltaG(v+1/2)
+     0    1059.00
+                       1973.22
+     1    3032.22
+                       1865.19
+     2    4897.41
+
+++ Matrix elements of observable: Dipole Moment
+>>>> matrix elements over vibrational wave functions (atomic units) for rotational quantum number  1
+     1  1    0.819981     2  1    0.007662     2  2    0.839692     3  1   -0.004304     3  2    0.005231     3  3    0.856460
+>>>> matrix elements over vibrational wave functions (atomic units) for rotational quantum number  2
+     1  1    0.820661     2  1    0.007499     2  2    0.840275     3  1   -0.004280     3  2    0.004977     3  3    0.856928
+>>>> matrix elements over vibrational wave functions (atomic units) for rotational quantum number  3
+     1  1    0.821670     2  1    0.007255     2  2    0.841139     3  1   -0.004242     3  2    0.004597     3  3    0.857618
+>>>> matrix elements over vibrational wave functions (atomic units) for rotational quantum number  4
+     1  1    0.822998     2  1    0.006930     2  2    0.842271     3  1    0.004193     3  2   -0.004089     3  3    0.858518
+
+Temperature averaged observable:   8.205976E-01  at  300.000K
+
+***
+*** Warning, temperature weighting not converged with respect to rotational quantum numbers
+***
+*** Quotient 1.361E-01 should be small
+***
+
+--
+--- Stop Module: vibrot at Tue Dec 27 10:12:46 2022 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 016_Ang_cm-1.VibPlt1 016_Ang_cm-1.VibWvs xmldump
+    saved to directory /home/nike/LEVEL/LEVEL_2022/test_suite/OMolcas_H2
+
+.##################.
+.# Happy landing! #.
+.##################.
+
+    Timing: Wall=0.06 User=0.02 System=0.01
