@@ -5471,28 +5471,28 @@ c-----------------------------------------------------------------------
 c** For MLR, DELR or Tiemann-polynomial potentials .....
               READ(5,*) NCMM, IVSR, IDSTT, rhoAB
               READ(5,*) (MMLR(I), CMM(I),I= 1,NCMM)
-              ENDIF
+          ENDIF
 c-----------------------------------------------------------------------
           IF(IPOTL.EQ.1) NVARB= 0
           IF(IPOTL.EQ.2) THEN
               NVARB= NLR+2
               IORD= NLR
               IF(PPAR.EQ.0) NVARB= NLR
-              ENDIF
+          ENDIF
           IF(IPOTL.EQ.3) THEN
               IORD= MAX(NSR,NLR)
               NVARB= IORD+1
               IF(PPAR.LE.0) NVARB=2
-              ENDIF
+          ENDIF
           IF(IPOTL.EQ.4) THEN
               IF(NSR.LE.0) NSR= NLR
               IORD= MAX(NSR,NLR)
               NVARB= IORD+ 1
-              ENDIF
+          ENDIF
           IF(IPOTL.EQ.5) THEN
               IORD= MAX(NSR,NLR)
               NVARB= IORD+ 3
-              ENDIF
+          ENDIF
           IF(IPOTL.EQ.6) NVARB= 5
           IF(IPOTL.EQ.7) NVARB= NLR+ 4
 c-----------------------------------------------------------------------
@@ -5505,7 +5505,7 @@ c-----------------------------------------------------------------------
               NCMAX= MAX0(NU1,NU2,NT1,NT2)
               IF(NCMAX.LT.0) THEN
                   IBOB= 0
-                ELSE
+              ELSE
 c** If appropriate, read parameters & prepare to add mass-dep. BOB corrn
                   CALL MASSES(IAN1,IMN1,NAME1,GEL,GNS,MASS1,ABUND)
                   CALL MASSES(IAN1,MN1R,NAME1,GEL,GNS,RMASS1,ABUND)
@@ -5517,7 +5517,7 @@ c  For simplicity, first zero out all correction function coefficients
                       U2(I)= 0.d0
                       T1(I)= 0.d0
                       T2(I)= 0.d0
-                      ENDDO
+                  ENDDO
                   FC1= 0.d0
                   FC2= 0.d0
                   FG1= 0.d0
@@ -5546,7 +5546,7 @@ c-----------------------------------------------------------------------
      1        1,U1INF,PAD,PAD,PAD,PAD,PAD,PAD,NU1,QAD,QAD,QAD,QAD,QAD,
      2                                         NU1+1,(U1(I),I= 0,NU1)
                       FC1= 1.d0 - RMASS1/MASS1
-                      ENDIF
+                  ENDIF
 c
                   IF(NU2.GE.0) THEN
 c... use Huang/Le Roy form for atom-2 adiabatic potential BOB radial fx.
@@ -5557,7 +5557,7 @@ c-----------------------------------------------------------------------
      1        1,U2INF,PAD,PAD,PAD,PAD,PAD,PAD,NU2,QAD,QAD,QAD,QAD,QAD,
      2                                         NU2+1,(U2(I),I= 0,NU2)
                       FC2= 1.d0 - RMASS2/MASS2
-                      ENDIF
+                  ENDIF
 c
                   IF(NT1.GE.0) THEN
 c... use Huang/Le Roy centrifugal BOB radial function for atom-1 ...
@@ -5567,7 +5567,7 @@ c-----------------------------------------------------------------------
                       WRITE(6,634) 1,MASS1,MN1R,NAME1,IMN1,NAME1,
      1 1,T1INF,PNA,PNA,PNA,PNA,PNA,PNA,NT1,PNA,NT1+1,(T1(I),I= 0,NT1)
                       FG1= RMASS1/MASS1
-                      ENDIF
+                  ENDIF
 c
                   IF(NT2.GE.0) THEN
 c... use Huang/Le Roy centrifugal BOB radial function for atom-2 ...
@@ -5577,7 +5577,7 @@ c-----------------------------------------------------------------------
                       WRITE(6,634) 2,MASS2,MN2R,NAME2,IMN2,NAME2,
      1 2,T2INF,PNA,PNA,PNA,PNA,PNA,PNA,NT2,PNA,NT2+1,(T2(I),I= 0,NT2)
                       FG2= RMASS2/MASS2
-                      ENDIF
+                  ENDIF
                   U1INF= U1INF*FC1
                   U2INF= U2INF*FC2
                   T1INF= T1INF*FG1
@@ -5588,10 +5588,10 @@ c... Now generates scaled expansion parameters all at the same time!
                       U2(I)= U2(I)*FC2
                       T1(I)= T1(I)*FG1
                       T2(I)= T2(I)*FG2
-                      ENDDO
-                ENDIF
+                  ENDDO
               ENDIF
           ENDIF
+      ENDIF
 c
 c=======================================================================
 c** Generate a  Lennard-Jones(NSR,NLR)  potential here.
@@ -5779,30 +5779,30 @@ c  NOTE ... the numerical factor here is  2\pi/\lambda  for this case
                               T0= T0+ CMM(4)*(RM3/REQ)**2
                               ULRe= ULRe + 0.5d0*CMM(4)*(RM3/REQ)**2
      1                                                  + C9adj*RM3**3
-                              ENDIF
                           ENDIF
+                      ENDIF
                       T0= T0/3.d0
                       ULRe= ULRe+0.5d0*DSQRT((T0-CMM(2))**2+ 8.d0*T0**2)
-                      ENDIF
+                  ENDIF
                   IF(MMLR(2).EQ.-1) THEN
                       CALL AF3X3LEV(REQ,CMM(2),CMM(1),C6adj,
      1                                               CMM(4),DSCM,ULRe)
                       ULRe= ULRe + C9adj*RM3**3
-                      ENDIF
-                ELSE
+                  ENDIF
+              ELSE
                   IF(rhoAB.GT.0.d0) THEN
                       KDER= 0
                       CALL dampF(REQ,rhoAB,NCMM,MMLR,IVSR,IDSTT,KDER,
      1                                                    DM,DMP,DMPP)
-                      ENDIF
+                  ENDIF
                   DO  J= 1,NCMM
                       IF(rhoAB.LE.0.d0) THEN
                           ULRe= ULRe + CMM(J)/REQ**MMLR(J)
-                        ELSE
+                      ELSE
                           ULRe= ULRe + DM(J)*CMM(J)/REQ**MMLR(J)
-                        ENDIF
-                      ENDDO
-                ENDIF
+                      ENDIF
+                  ENDDO
+              ENDIF
               BINF= DLOG(2.d0*DSCM/ULRe)
               WRITE(6,602) NCN,PPAR,QPAR,DSCM,REQ
 c... use THEOCHEM/Huang form:  \beta(yp)= Binf*yp + [1-yp]*{power series in yq}
@@ -5810,37 +5810,37 @@ c... use THEOCHEM/Huang form:  \beta(yp)= Binf*yp + [1-yp]*{power series in yq}
      1                                       (PARM(J),J= 1,IORD+1)
               IF(Rref.GT.0) THEN
                   WRITE(6,613) Rref
-                ELSE
+              ELSE
                   WRITE(6,615) REQ
                   Rref= REQ
-                ENDIF
+              ENDIF
               IF(rhoAB.GT.0.d0) THEN
                   PVSR= 0.5d0*IVSR
                   IF(IDSTT.GT.0) THEN
                       PVSR= 0.5d0*IVSR
                       WRITE(6,664) rhoAB,PVSR,bDS(IVSR),cDS(IVSR),PVSR
-                    ELSE
+                  ELSE
                       LVSR= IVSR/2
                       WRITE(6,666) rhoAB,LVSR,bTT(LVSR)
-                    ENDIF
-                ELSE
+                  ENDIF
+              ELSE
                   WRITE(6,668)
-                ENDIF
+              ENDIF
               WRITE(6,617) BINF,MMLR(1),CMM(1),MMLR(1)
               IF(NCMM.GT.1) THEN
                   MM1= 2
                   IF(MMLR(2).EQ.0) THEN
                       MM1= 3
                       WRITE(6,623) MMLR(2),CMM(2),MMLR(2)
-                      ENDIF
+                  ENDIF
                   DO  I= MM1,NCMM
                       IF(MMLR(I).LE.9) WRITE(6,619) MMLR(I),CMM(I)
      1                                                    ,MMLR(I)
                       IF(MMLR(I).GT.9) WRITE(6,621) MMLR(I),CMM(I)
      1                                                    ,MMLR(I)
-                      ENDDO
-                  ENDIF
+                  ENDDO
               ENDIF
+          ENDIF
 c  Loop over distance array XO(I)
           DO  I= 1,NPP
               ZZ= (XO(i)**PPAR- REQ**PPAR)/(XO(i)**PPAR+ REQ**PPAR)
@@ -5851,7 +5851,7 @@ c  Loop over distance array XO(I)
               IF(ZZ.LE.0) IORDD= NSR
               DO  J= IORDD,0,-1
                   BETA= BETA*ZQ+ PARM(J+1)
-                  ENDDO
+              ENDDO
 c  Calculate MLR exponent coefficient
               BETA= BINF*ZP + (1.d0- ZP)*BETA
               ULR= 0.d0
@@ -5877,39 +5877,39 @@ c... Aubert-Frecon 2x2 case - for A-state Li2
                               T0= T0+ CMM(4)*(RM3/XO(I))**2
                               ULR= ULR + 0.5d0*CMM(4)*(RM3/XO(I))**2
      1                                                  + C9adj*RM3**3
-                              ENDIF
                           ENDIF
+                      ENDIF
                       T0= T0/3.d0
                       ULR= ULR+ 0.5d0*DSQRT((T0- CMM(2))**2+ 8.d0*T0**2)
-                      ENDIF
+                  ENDIF
                   IF(MMLR(2).EQ.-1) THEN
 c... for Aubert-Frecon 3x3 case yielding lowest (c state) energy
                       CALL AF3X3LEV(XO(I),CMM(2),CMM(1),C6adj,
      1                                                CMM(4),DSCM,ULR)
                       ULR= ULR + C9adj*RM3**3
-                      ENDIF
-                ELSE
+                  ENDIF
+              ELSE
 c** For the 'regular' simple inverse-power sum case.
                   IF(rhoAB.GT.0.d0) CALL dampF(XO(I),rhoAB,NCMM,MMLR,
      1                                    IVSR,IDSTT,KDER,DM,DMP,DMPP)
                   DO  J= 1,NCMM
                       IF(rhoAB.LE.0.d0) THEN
                           ULR= ULR + CMM(J)/XO(I)**MMLR(J)
-                        ELSE
+                      ELSE
                           ULR= ULR + DM(J)*CMM(J)/XO(I)**MMLR(J)
-                        ENDIF
-                      ENDDO
-                ENDIF
+                      ENDIF
+                  ENDDO
+              ENDIF
               BETA= (ULR/ULRe)*DEXP(-BETA*ZZ)
               VV(I)= DSCM*(1.d0 - BETA)**2 - DSCM + VLIM
-              ENDDO
+          ENDDO
               WRITE(6,*) 'Finished MLR generation. First/last V(R):'
               DO I=1,3
                WRITE(6,*) 'V(',I,')=',VV(I)
               ENDDO
               WRITE(6,*) 'V(                 20000)=',VV(20000)
               WRITE(6,*) 'V(',NPP,')=',VV(NPP)
-          ENDIF
+      ENDIF
 c
 c=======================================================================
 c** Generate a DELR potential [as per JCP 119, 7398 (2003)] 
