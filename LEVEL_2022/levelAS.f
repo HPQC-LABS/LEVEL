@@ -1092,7 +1092,7 @@ c ... check to avoid array overflow
               IF(JCT.GT.VIBMX) THEN
                   WRITE(6,637)  VIBMX
                   STOP
-                  ENDIF 
+              ENDIF 
               JWR(JCT)= JROT
               ESLJ(JCT)= EO
       ENDDO
@@ -1103,12 +1103,13 @@ c** Print rotational sublevels generated for vibrational level  ILEV
               WRITE(6,627) KV
               DO  J=1,NROW
                   WRITE(6,628) (JWR(I),ESLJ(I),I=J,JCT,NROW)
-                  ENDDO
+              ENDDO
               WRITE(6,641)
-              ENDIF
+          ENDIF
           ESOLN(ILEV1)= ESLJ(1)
   190     CONTINUE
 c++ End of loop over the NLEV Potential-1 input levels
+      WRITE(6,*) 'SUMMARY (ALL ENERGIES IN CM-1):'
       IF(NLEV1.LT.0) THEN
           NROW=(NLEV+3)/4
           WRITE(6,623) NLEV,IJ(1)
