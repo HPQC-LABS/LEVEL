@@ -28,7 +28,7 @@
             OPENMOLCASOPENMOLCASOPENM
                OPENMOLCASOPENMOLCA        version: 22.10
                    OPENMOLCASO
-                       OPE                tag: 449-ga124b5702-dirty
+                       OPE                tag: 453-gc68f288e8
 
  OpenMolcas is free software; you can redistribute it and/or modify it
  under the terms of the GNU Lesser General Public License version 2.1.
@@ -54,7 +54,7 @@ C Compiler ID: GNU
 C flags: -std=gnu99
 Fortran Compiler ID: GNU
 Fortran flags: -fno-aggressive-loop-optimizations -cpp -fdefault-integer-8 -fmax-stack-var-size=1048576
-Definitions: _MOLCAS_;_I8_;_LINUX_
+Definitions: _WARNING_WORKAROUND_;_MOLCAS_;_I8_;_LINUX_
 Parallel: OFF (GA=OFF)
 
 
@@ -140,7 +140,7 @@ Parallel: OFF (GA=OFF)
 
 -- ----------------------------------
 
---- Start Module: vibrot at Tue Dec 27 10:33:24 2022 ---
+--- Start Module: vibrot at Sat Dec 31 11:59:34 2022 ---
 
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
 
@@ -148,9 +148,15 @@ Parallel: OFF (GA=OFF)
 
                                    only a single process is used
                        available to each process: 2.0 GB of memory, 1 thread?
-                                             pid: 4608
+                                             pid: 53445
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
 
+
+ Distance provided in units of Angstroms.
+ Converting to Bohr radii.
+
+ Energy provided in cm^(-1).
+ Converting to hartree.
 
  Vibration-Rotation spectrum for the HH   molecule.
  H2 (^1 Pi_u)                                                                    
@@ -170,12 +176,6 @@ Parallel: OFF (GA=OFF)
 
  Spectroscopic constants will be computed
  Matrix elements of  1 operators will be computed
-
- Distance provided in units of Angstroms.
- Converting to Bohr radii.
-
- Energy provided in units of cm^(-1).
- Converting to hartrees.
 
  Potential read from input
        R(au)     E(au)
@@ -215,31 +215,31 @@ Parallel: OFF (GA=OFF)
 
        Dipole Moment     
      R(au)        Value
-    0.8000      0.579384
-    1.0000      0.628520
-    1.1000      0.652166
-    1.2000      0.675062
-    1.3000      0.697099
-    1.4000      0.718214
-    1.5000      0.738339
-    1.6000      0.757417
-    1.7000      0.775387
-    1.8000      0.792198
-    1.9000      0.807790
-    2.0000      0.822110
-    2.1000      0.835106
-    2.2000      0.846727
-    2.4000      0.865655
-    2.8000      0.885321
-    3.2000      0.880562
-    3.6000      0.854747
-    4.0000      0.815152
-    5.0000      0.705491
-    6.0000      0.621031
-   10.0000      0.465011
+    0.4233      0.579384
+    0.5292      0.628520
+    0.5821      0.652166
+    0.6350      0.675062
+    0.6879      0.697099
+    0.7408      0.718214
+    0.7938      0.738339
+    0.8467      0.757417
+    0.8996      0.775387
+    0.9525      0.792198
+    1.0054      0.807790
+    1.0584      0.822110
+    1.1113      0.835106
+    1.1642      0.846727
+    1.2700      0.865655
+    1.4817      0.885321
+    1.6934      0.880562
+    1.9050      0.854747
+    2.1167      0.815152
+    2.6459      0.705491
+    3.1751      0.621031
+    5.2918      0.465011
      Plot file
   Interpolated value at equilibrium for state 1:
-    1.9451      0.814406
+    1.9451      0.848034
 
 
  Eigenstates
@@ -351,15 +351,15 @@ Parallel: OFF (GA=OFF)
 
 ++ Matrix elements of observable: Dipole Moment
 >>>> matrix elements over vibrational wave functions (atomic units) for rotational quantum number  1
-     1  1    0.819981     2  1    0.007662     2  2    0.839692     3  1   -0.004304     3  2    0.005231     3  3    0.856460
+     1  1    0.831424     2  1   -0.060035     2  2    0.807691     3  1    0.008840     3  2   -0.085320     3  3    0.786262
 >>>> matrix elements over vibrational wave functions (atomic units) for rotational quantum number  2
-     1  1    0.820661     2  1    0.007499     2  2    0.840275     3  1   -0.004280     3  2    0.004977     3  3    0.856928
+     1  1    0.830549     2  1   -0.060288     2  2    0.806821     3  1    0.009016     3  2   -0.085578     3  3    0.785413
 >>>> matrix elements over vibrational wave functions (atomic units) for rotational quantum number  3
-     1  1    0.821670     2  1    0.007255     2  2    0.841139     3  1   -0.004242     3  2    0.004597     3  3    0.857618
+     1  1    0.829232     2  1   -0.060659     2  2    0.805513     3  1    0.009277     3  2   -0.085955     3  3    0.784140
 >>>> matrix elements over vibrational wave functions (atomic units) for rotational quantum number  4
-     1  1    0.822998     2  1    0.006930     2  2    0.842271     3  1    0.004193     3  2   -0.004089     3  3    0.858518
+     1  1    0.827466     2  1   -0.061138     2  2    0.803767     3  1   -0.009620     3  2    0.086438     3  3    0.782445
 
-Temperature averaged observable:   8.205976E-01  at  300.000K
+Temperature averaged observable:   8.306238E-01  at  300.000K
 
 ***
 *** Warning, temperature weighting not converged with respect to rotational quantum numbers
@@ -368,7 +368,7 @@ Temperature averaged observable:   8.205976E-01  at  300.000K
 ***
 
 --
---- Stop Module: vibrot at Tue Dec 27 10:33:24 2022 /rc=_RC_ALL_IS_WELL_ ---
+--- Stop Module: vibrot at Sat Dec 31 11:59:35 2022 /rc=_RC_ALL_IS_WELL_ ---
 *** files: 016_Ang_cm-1.VibPlt1 016_Ang_cm-1.VibWvs xmldump
     saved to directory /home/nike/LEVEL/LEVEL_2022/test_suite/OMolcas_H2
 
@@ -376,4 +376,4 @@ Temperature averaged observable:   8.205976E-01  at  300.000K
 .# Happy landing! #.
 .##################.
 
-    Timing: Wall=0.04 User=0.02 System=0.01
+    Timing: Wall=0.08 User=0.02 System=0.01
