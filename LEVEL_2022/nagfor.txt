@@ -1,0 +1,159 @@
+nagfor -O2 -u              -c -o levelAS.o levelAS.f
+NAG Fortran Compiler Release 7.1(Hanzomon) Build 7114
+Evaluation trial version of NAG Fortran Compiler Release 7.1(Hanzomon) Build 7114
+Non-standard(Obsolete): levelAS.f, line 33: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 46: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 50: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 54: Byte count on numeric data type
+                        detected at *@8
+Error: levelAS.f, line 1289: Implicit type for DFLOAT
+Non-standard(Obsolete): levelAS.f, line 1306: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 1311: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 1312: Byte count on numeric data type
+                        detected at *@8
+Questionable: levelAS.f, line 1425: Variable PINV set but never referenced
+Non-standard(Obsolete): levelAS.f, line 1436: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 1438: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 1607: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 1612: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 1614: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 1874: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 2548: TAB format input
+Non-standard(Obsolete): levelAS.f, line 2643: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 2653: Byte count on numeric data type
+                        detected at *@8
+Warning: levelAS.f, line 2978: Unused local variable BZ
+Questionable: levelAS.f, line 2978: Variable KVBB set but never referenced
+Questionable: levelAS.f, line 2978: Variable NBEGG set but never referenced
+Questionable: levelAS.f, line 2978: Variable NENDD set but never referenced
+Questionable: levelAS.f, line 2978: Variable RE set but never referenced
+Questionable: levelAS.f, line 2978: Variable YMAX set but never referenced
+Warning: levelAS.f, line 2978: Unused dummy variable ZMU
+Non-standard(Obsolete): levelAS.f, line 2996: Byte count on numeric data type
+                        detected at *@8
+Error: levelAS.f, line 3238: Implicit type for DFLOAT
+Questionable: levelAS.f, line 3238: Variable DGDVM set but never referenced
+Warning: levelAS.f, line 3238: Unused local variable NPMAX
+Non-standard(Obsolete): levelAS.f, line 3296: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 3304: Byte count on numeric data type
+                        detected at *@8
+Questionable: levelAS.f, line 3772: Variable XEND set but never referenced
+Non-standard(Obsolete): levelAS.f, line 3790: Byte count on numeric data type
+                        detected at *@8
+Questionable: levelAS.f, line 3884: Variable FJ set but never referenced
+Questionable: levelAS.f, line 3884: Variable YMINN set but never referenced
+Non-standard(Obsolete): levelAS.f, line 3905: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 3911: Byte count on numeric data type
+                        detected at *@8
+Warning: levelAS.f, line 4197: Unused local variable ARVP
+Warning: levelAS.f, line 4197: Unused local variable AS
+Warning: levelAS.f, line 4197: Unused local variable DF
+Warning: levelAS.f, line 4197: Unused local variable DIFF
+Warning: levelAS.f, line 4197: Unused local variable DIFFM
+Warning: levelAS.f, line 4197: Unused local variable DIFFP
+Warning: levelAS.f, line 4197: Unused local variable DRDYA
+Warning: levelAS.f, line 4197: Unused local variable DRDYB
+Warning: levelAS.f, line 4197: Unused local variable ERANGE
+Warning: levelAS.f, line 4197: Unused local variable ERANGE2
+Warning: levelAS.f, line 4197: Unused local variable FASA
+Warning: levelAS.f, line 4197: Unused local variable FASB
+Questionable: levelAS.f, line 4197: Variable GB set but never referenced
+Warning: levelAS.f, line 4197: Unused local variable GIA
+Warning: levelAS.f, line 4197: Unused local variable GIB
+Warning: levelAS.f, line 4197: Unused dummy variable IAN1
+Warning: levelAS.f, line 4197: Unused dummy variable IAN2
+Warning: levelAS.f, line 4197: Unused dummy variable IMN1
+Warning: levelAS.f, line 4197: Unused dummy variable IMN2
+Warning: levelAS.f, line 4197: Unused dummy variable IOMEG
+Warning: levelAS.f, line 4197: Unused local variable ITER
+Warning: levelAS.f, line 4197: Local variable LNPT0 is initialised but never used
+Questionable: levelAS.f, line 4197: Variable NBEG2 set but never referenced
+Warning: levelAS.f, line 4197: Local variable NP2 is initialised but never used
+Warning: levelAS.f, line 4197: Unused local variable RM2
+Warning: levelAS.f, line 4197: Unused local variable RR
+Warning: levelAS.f, line 4197: Unused local variable RRA
+Warning: levelAS.f, line 4197: Unused local variable RRP
+Warning: levelAS.f, line 4197: Unused local variable SDRDYA
+Warning: levelAS.f, line 4197: Unused local variable SDRDYB
+Warning: levelAS.f, line 4197: Unused local variable SLOPE
+Warning: levelAS.f, line 4197: Unused local variable SUMSL2
+Warning: levelAS.f, line 4197: Unused local variable VV
+Warning: levelAS.f, line 4197: Unused local variable YH2
+Warning: levelAS.f, line 4197: Unused local variable YHH
+Warning: levelAS.f, line 4197: Unused local variable ZQ
+Non-standard(Obsolete): levelAS.f, line 4213: Byte count on numeric data type
+                        detected at *@8
+Questionable: levelAS.f, line 4414: Variable R1 set but never referenced
+Questionable: levelAS.f, line 4414: Variable R2 set but never referenced
+Questionable: levelAS.f, line 4414: Variable R3 set but never referenced
+Non-standard(Obsolete): levelAS.f, line 4430: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 4524: Byte count on numeric data type
+                        detected at *@8
+Questionable: levelAS.f, line 4767: Variable RMIN set but never referenced
+Non-standard(Obsolete): levelAS.f, line 4793: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 5216: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 5309: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 5385: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 5507: Byte count on numeric data type
+                        detected at *@8
+Error: levelAS.f, line 6256: Missing comma in format specification
+       detected at '  Rref= Re='@F10.7
+Questionable: levelAS.f, line 6341: Variable AAD1 set but never referenced
+Questionable: levelAS.f, line 6341: Variable AAD2 set but never referenced
+Questionable: levelAS.f, line 6341: Variable ANA1 set but never referenced
+Warning: levelAS.f, line 6341: Unused local variable ANA2
+Warning: levelAS.f, line 6341: Unused local variable ASW
+Warning: levelAS.f, line 6341: Unused local variable BFCT
+Warning: levelAS.f, line 6341: Unused local variable FAD1E
+Warning: levelAS.f, line 6341: Unused local variable FAD2E
+Warning: levelAS.f, line 6341: Unused local variable FSW
+Questionable: levelAS.f, line 6341: Variable RAD1 set but never referenced
+Questionable: levelAS.f, line 6341: Variable RAD2 set but never referenced
+Questionable: levelAS.f, line 6341: Variable RNA1 set but never referenced
+Questionable: levelAS.f, line 6341: Variable RNA2 set but never referenced
+Warning: levelAS.f, line 6341: Unused local variable RSW
+Warning: levelAS.f, line 6341: Local variable ZME is initialised but never used
+Non-standard(Obsolete): levelAS.f, line 6373: Byte count on numeric data type
+                        detected at *@8
+Error: levelAS.f, line 6507: Implicit type for DFLOAT
+Warning: levelAS.f, line 6507: Unused local variable NCMMAX
+Non-standard(Obsolete): levelAS.f, line 6514: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 6516: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 6518: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 6631: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): levelAS.f, line 6632: Byte count on numeric data type
+                        detected at *@8
+Questionable: levelAS.f, line 6744: Variable DEIGDE set but never referenced
+Questionable: levelAS.f, line 6744: Variable DEIGM1 set but never referenced
+Questionable: levelAS.f, line 6744: Variable DEIGM3 set but never referenced
+Questionable: levelAS.f, line 6744: Variable DEIGM5 set but never referenced
+Questionable: levelAS.f, line 6744: Variable DEIGR set but never referenced
+Warning: levelAS.f, line 6744: Unused local variable K
+Questionable: levelAS.f, line 6744: Variable MODULUS set but never referenced
+Warning: levelAS.f, line 6744: Unused local variable RESID
+[NAG Fortran Compiler pass 1 error termination, 4 errors, 113 warnings]
+<builtin>: recipe for target 'levelAS.o' failed
+make: *** [levelAS.o] Error 2
