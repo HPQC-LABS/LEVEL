@@ -28,7 +28,7 @@
             OPENMOLCASOPENMOLCASOPENM
                OPENMOLCASOPENMOLCA        version: 22.06
                    OPENMOLCASO
-                       OPE                tag: 202-g10996b7dd
+                       OPE                tag: 211-g75a2ab879
 
  OpenMolcas is free software; you can redistribute it and/or modify it
  under the terms of the GNU Lesser General Public License version 2.1.
@@ -49,16 +49,16 @@
 
 configuration info
 ------------------
-Host name: cedar5.cedar.computecanada.ca (Linux)
+Host name: cedar1.cedar.computecanada.ca (Linux)
 C Compiler ID: GNU
 C flags: -std=gnu99
 Fortran Compiler ID: GNU
-Fortran flags: -fno-aggressive-loop-optimizations -cpp -fdefault-integer-8 -fmax-stack-var-size=1048584
-Definitions: _ADDITIONAL_RUNTIME_CHECK_;_WARNING_WORKAROUND_;_MOLCAS_;_I8_;_LINUX_;_GARBLE_;_FPE_TRAP_
+Fortran flags: -fno-aggressive-loop-optimizations -cpp -fdefault-integer-8 -fmax-stack-var-size=1048576
+Definitions: _WARNING_WORKAROUND_;_MOLCAS_;_I8_;_LINUX_
 Parallel: OFF (GA=OFF)
 
 
-   ------------------------------------------------------------------------
+   ------------------------------------------------------------------------------
   |
   |           Project: 800
   |    Submitted from: /home/nike/build_OpenMolcas_HPQC_2022_12_30
@@ -68,12 +68,12 @@ Parallel: OFF (GA=OFF)
   |
   | Scratch area is NOT empty
   |
-  |    MOLCAS_DRIVER = /home/nike/build_OpenMolcas_HPQC_2022_12_30/pymolcas
+  |    MOLCAS_DRIVER = /home/nike/build_OpenMolcas_Deyan_Unit_Conversion/pymolcas
   |    MOLCAS_NPROCS = 1
   |    MOLCAS_SOURCE = /home/nike/OpenMolcas_HPQC_2022_12_30
   | MOLCAS_STRUCTURE = 0
   |
-   ------------------------------------------------------------------------
+   ------------------------------------------------------------------------------
 
 ++ ---------   Input file   ---------
 
@@ -111,7 +111,7 @@ Parallel: OFF (GA=OFF)
   PARM = -5.156803528943D-01 -9.585070416286D-02 1.170797201140D-01 -2.282814434665D-02
   NLEV1 = -999
   AUTO1 = 1
-  LCDC = 2
+  LCDC = 0
   LXPCT = 0
   NJM = 0
   JDJR = 1
@@ -119,7 +119,7 @@ Parallel: OFF (GA=OFF)
 
 -- ----------------------------------
 
---- Start Module: level at Tue Jan  3 20:26:48 2023 ---
+--- Start Module: level at Sun Jan  8 20:59:38 2023 ---
 
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
 
@@ -127,7 +127,7 @@ Parallel: OFF (GA=OFF)
 
                                    only a single process is used
                        available to each process: 2.0 GB of memory, 1 thread?
-                                             pid: 27388
+                                             pid: 50877
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
 
 
@@ -481,161 +481,301 @@ ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)
 
  *** SCHRQ FAILS in ALF when searching for  v= 10 J=  0   with   EO=   -0.000
      Check range and/or contact    . Nike Dattani [nike@hpqc.org,ndattani@uwaterloo.ca]
- Entering schrq.f
- Entering schrq.f
- Entering schrq.f
- Entering schrq.f
- Entering schrq.f
- Entering schrq.f
- Entering schrq.f
- Entering schrq.f
- Entering schrq.f
- Entering schrq.f
- Entering schrq.f
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    0
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO=  -299.36620934343381     
+ NBEG=                11902
+ NEND=                23761
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    1
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO=  -236.65424824321337     
+ NBEG=                11767
+ NEND=                24545
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    2
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO=  -181.53475229122844     
+ NBEG=                11675
+ NEND=                25337
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    3
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO=  -133.79979746927648     
+ NBEG=                11608
+ NEND=                26180
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    4
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO=  -93.372923484722008     
+ NBEG=                11560
+ NEND=                27114
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    5
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO=  -60.279884342828105     
+ NBEG=                11529
+ NEND=                28189
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    6
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO=  -34.606936420830863     
+ NBEG=                11513
+ NEND=                29477
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    7
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO=  -16.410946495405035     
+ NBEG=                11514
+ NEND=                31089
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    8
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO=  -5.4835593342045703     
+ NBEG=                11540
+ NEND=                33182
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (2)
+ Entering schrq.f (2)
+ 
+ Getting band constants for v=                    9
+ 
+ Exiting level.f
+ Entering cdjoel.f
+ 
+ EO= -0.81512650334788672     
+ NBEG=                11607
+ NEND=                35906
+ BvWN=   5.6050823148656947     
+ YH=   4.9999999999999996E-005
+ WARN=                    0
+ VJ(1)=   1.8136129994725962E-002
+ WF1(1)=   0.0000000000000000     
+ RM2(1)=   440.23812552667658     
+ RCNST(1)=                       NaN
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  0   J=  0   ETRIAL= -2.9936621D+02  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  0   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -2.9936621D+02  integration can't start till inside
-                     mesh point 24504 (yp=  0.2740),  so YMAX larger than needed
-  1 -2.9936621D+02 -1.78D-15  3.30D+05 -1.21D-11 18302 -0.036  6.1-166  3.5D-11    1 16384
- ------------------------------------------------------------------------------------------------
-E(v=  0,J=  0)=  -299.36620934  1 iterations  yp(M)=-0.036  WF(NBEG)/WF(M)= 4.7-166   NBEG=11902
-                                        R(NEND)=     8.10   WF(NEND)/WF(M)= 4.8D-11   NEND=23760
- E(v=  0, J=  0)=  -299.366   Bv=  0.3103993  -Dv= -2.7416D-05   Hv= -1.7537D-09
-           Lv= -4.1189D-13   Mv= -1.1683D-16   Nv= -4.2039D-20   Ov= -1.7002D-23
- Entering schrq.f
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  1   J=  0   ETRIAL= -2.3665425D+02  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  1   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -2.3665425D+02  integration can't start till inside
-                     mesh point 25294 (yp=  0.3135),  so YMAX larger than needed
-  1 -2.3665425D+02 -1.81D-15  4.40D+05 -9.21D-12 19304  0.014 -2.5-165  3.9D-11    1 15912
- ------------------------------------------------------------------------------------------------
-E(v=  1,J=  0)=  -236.65424824  1 iterations  yp(M)= 0.014  WF(NBEG)/WF(M)=-1.8-165   NBEG=11767
-                                        R(NEND)=     8.81   WF(NEND)/WF(M)= 5.3D-11   NEND=24544
- E(v=  1, J=  0)=  -236.654   Bv=  0.2867374  -Dv= -2.8730D-05   Hv= -2.2377D-09
-           Lv= -6.7067D-13   Mv= -2.5262D-16   Nv= -1.1300D-19   Ov= -5.5128D-23
- Entering schrq.f
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  2   J=  0   ETRIAL= -1.8153475D+02  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  2   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -1.8153475D+02  integration can't start till inside
-                     mesh point 26104 (yp=  0.3540),  so YMAX larger than needed
-  1 -1.8153475D+02 -1.06D-14  5.29D+05 -4.48D-11 20129  0.055  6.6-165  3.9D-11    1 15645
- ------------------------------------------------------------------------------------------------
-E(v=  2,J=  0)=  -181.53475229  1 iterations  yp(M)= 0.055  WF(NBEG)/WF(M)= 4.6-165   NBEG=11675
-                                        R(NEND)=     9.61   WF(NEND)/WF(M)= 5.4D-11   NEND=25336
- E(v=  2, J=  0)=  -181.535   Bv=  0.2630997  -Dv= -3.0567D-05   Hv= -3.1594D-09
-           Lv= -1.2058D-12   Mv= -5.6819D-16   Nv= -3.0838D-19   Ov= -1.8239D-22
- Entering schrq.f
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  3   J=  0   ETRIAL= -1.3379980D+02  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  3   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -1.3379980D+02  integration can't start till inside
-                     mesh point 26974 (yp=  0.3974),  so YMAX larger than needed
-  1 -1.3379980D+02 -1.29D-14  6.25D+05 -4.62D-11 20911  0.094 -1.4-164  3.8D-11    1 15462
- ------------------------------------------------------------------------------------------------
-E(v=  3,J=  0)=  -133.79979747  1 iterations  yp(M)= 0.094  WF(NBEG)/WF(M)=-9.2-165   NBEG=11608
-                                        R(NEND)=    10.57   WF(NEND)/WF(M)= 5.4D-11   NEND=26179
- E(v=  3, J=  0)=  -133.800   Bv=  0.2390465  -Dv= -3.3325D-05   Hv= -4.8382D-09
-           Lv= -2.3235D-12   Mv= -1.3638D-15   Nv= -9.1599D-19   Ov= -6.7174D-22
- Entering schrq.f
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  4   J=  0   ETRIAL= -9.3372923D+01  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  4   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -9.3372923D+01  integration can't start till inside
-                     mesh point 27934 (yp=  0.4455),  so YMAX larger than needed
-  1 -9.3372923D+01 -1.70D-15  7.40D+05 -5.15D-12 21702  0.134  2.5-164  3.8D-11    1 15330
- ------------------------------------------------------------------------------------------------
-E(v=  4,J=  0)=   -93.37292348  1 iterations  yp(M)= 0.134  WF(NBEG)/WF(M)= 1.6-164   NBEG=11560
-                                        R(NEND)=    11.79   WF(NEND)/WF(M)= 5.5D-11   NEND=27113
- E(v=  4, J=  0)=   -93.373   Bv=  0.2140251  -Dv= -3.7594D-05   Hv= -7.9531D-09
-           Lv= -4.8584D-12   Mv= -3.6450D-15   Nv= -3.1336D-18   Ov= -2.9495D-21
- Entering schrq.f
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  5   J=  0   ETRIAL= -6.0279884D+01  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  5   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -6.0279884D+01  integration can't start till inside
-                     mesh point 29034 (yp=  0.5004),  so YMAX larger than needed
-  1 -6.0279884D+01 -1.14D-14  8.91D+05 -2.86D-11 22545  0.176 -3.9-164  3.9D-11    1 15232
- ------------------------------------------------------------------------------------------------
-E(v=  5,J=  0)=   -60.27988434  1 iterations  yp(M)= 0.176  WF(NBEG)/WF(M)=-2.3-164   NBEG=11529
-                                        R(NEND)=    13.46   WF(NEND)/WF(M)= 5.9D-11   NEND=28188
- E(v=  5, J=  0)=   -60.280   Bv=  0.1873331  -Dv= -4.4397D-05   Hv= -1.4129D-08
-           Lv= -1.1391D-11   Mv= -1.1445D-14   Nv= -1.3256D-17   Ov= -1.6898D-20
- Entering schrq.f
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  6   J=  0   ETRIAL= -3.4606936D+01  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  6   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -3.4606936D+01  integration can't start till inside
-                     mesh point 30354 (yp=  0.5665),  so YMAX larger than needed
-  1 -3.4606936D+01  8.24D-15  1.12D+06  1.65D-11 23498  0.224  5.2-164  3.6D-11    1 15162
- ------------------------------------------------------------------------------------------------
-E(v=  6,J=  0)=   -34.60693642  1 iterations  yp(M)= 0.224  WF(NBEG)/WF(M)= 3.0-164   NBEG=11513
-                                        R(NEND)=    15.94   WF(NEND)/WF(M)= 5.9D-11   NEND=29476
- E(v=  6, J=  0)=   -34.607   Bv=  0.1580557  -Dv= -5.5700D-05   Hv= -2.7783D-08
-           Lv= -3.1617D-11   Mv= -4.5919D-14   Nv= -7.7791D-17   Ov= -1.4624D-19
- Entering schrq.f
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  7   J=  0   ETRIAL= -1.6410946D+01  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  7   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -1.6410946D+01  integration can't start till inside
-                     mesh point 31984 (yp=  0.6480),  so YMAX larger than needed
-  1 -1.6410946D+01  6.85D-15  1.52D+06  1.01D-11 24658  0.282 -6.3-164  3.3D-11    1 15114
- ------------------------------------------------------------------------------------------------
-E(v=  7,J=  0)=   -16.41094650  1 iterations  yp(M)= 0.282  WF(NBEG)/WF(M)=-3.3-164   NBEG=11514
-                                        R(NEND)=    20.20   WF(NEND)/WF(M)= 6.0D-11   NEND=31088
- E(v=  7, J=  0)=   -16.411   Bv=  0.1250607  -Dv= -7.5616D-05   Hv= -6.3419D-08
-           Lv= -1.1510D-10   Mv= -2.7687D-13   Nv= -7.9049D-16   Ov= -2.5275D-18
- Entering schrq.f
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  8   J=  0   ETRIAL= -5.4835593D+00  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  8   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -5.4835593D+00  integration can't start till inside
-                     mesh point 34044 (yp=  0.7510),  so YMAX larger than needed
-  1 -5.4835593D+00 -6.54D-15  2.45D+06 -5.99D-12 26226  0.360  6.6-164  2.7D-11    1 15087
- ------------------------------------------------------------------------------------------------
-E(v=  8,J=  0)=    -5.48355933  1 iterations  yp(M)= 0.360  WF(NBEG)/WF(M)= 3.1-164   NBEG=11540
-                                        R(NEND)=    29.22   WF(NEND)/WF(M)= 6.0D-11   NEND=33181
- E(v=  8, J=  0)=    -5.484   Bv=  0.0873989  -Dv= -1.1387D-04   Hv= -1.8991D-07
-           Lv= -7.1400D-10   Mv= -3.7287D-12   Nv= -2.3402D-14   Ov= -1.6517D-16
- Entering schrq.f
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ Exiting level.f (4)
+ Entering schrq.f (4)
+ 
 
- Solve for  v=  9   J=  0   ETRIAL= -8.1512650D-01  INNER= 0   WF(1st)  WF(NEND)
+ Solve for  v=  9   J=  0   ETRIAL=            NaN  INNER= 0   WF(1st)  WF(NEND)
 ITER    ETRIAL        F(E)      DF(E)     D(E)     M    yp(M)   /WF(M)    /WF(M)  NBEG  ITP1
  ------------------------------------------------------------------------------------------------
- *** For  J=  0   E= -8.1512650D-01  integration can't start till inside
-                     mesh point 36574 (yp=  0.8774),  so YMAX larger than needed
-  1 -8.1512650D-01 -5.73D-14  6.25D+06 -2.06D-11 28725  0.485 -6.1-164  1.8D-11    1 15075
- ------------------------------------------------------------------------------------------------
-E(v=  9,J=  0)=    -0.81512650  1 iterations  yp(M)= 0.485  WF(NBEG)/WF(M)=-2.3-164   NBEG=11607
-                                        R(NEND)=    59.10   WF(NEND)/WF(M)= 6.0D-11   NEND=35905
- E(v=  9, J=  0)= -0.8151265  Bv= 4.5824D-02  -Dv= -2.1064D-04   Hv= -1.2626D-06
-           Lv= -1.9140D-08   Mv= -4.0463D-10   Nv= -1.0189D-11   Ov= -2.8625D-13
+ *** SCHRQ inward search at   J=  0   E=        NaN finds no classical region
+ 
+ SUMMARY (ALL ENERGIES IN CM-1):
 
  Find  10 Potential-1 vibrational levels with  J=  0
      v     E(v)        v     E(v)        v     E(v)        v     E(v)   
     --------------    --------------    --------------    --------------
-     0   -299.3662     3   -133.7998     6    -34.6069     9     -0.8151
-     1   -236.6542     4    -93.3729     7    -16.4109
-     2   -181.5348     5    -60.2799     8     -5.4836
-
- An  n= 6  N-D theory extrapolation from last 2 levels implies   vD =  10.126
+     0         NaN     3         NaN     6         NaN     9         NaN
+     1         NaN     4         NaN     7         NaN
+     2         NaN     5         NaN     8         NaN
  ===============================================================================
 
 
 
 
---- Stop Module: level at Tue Jan  3 20:26:48 2023 /rc=_RC_ALL_IS_WELL_ ---
+--- Stop Module: level at Sun Jan  8 20:59:39 2023 /rc=_RC_ALL_IS_WELL_ ---
 *** files: xmldump
     saved to directory /home/nike/build_OpenMolcas_HPQC_2022_12_30
 
@@ -643,4 +783,4 @@ E(v=  9,J=  0)=    -0.81512650  1 iterations  yp(M)= 0.485  WF(NBEG)/WF(M)=-2.3-
 .# Happy landing! #.
 .##################.
 
-    Timing: Wall=0.11 User=0.09 System=0.01
+    Timing: Wall=0.11 User=0.07 System=0.01
