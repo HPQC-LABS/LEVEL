@@ -1,0 +1,99 @@
+nagfor -O2               -c -o 2016LEVEL_fromJQSRTbutDoesNotCompile.o 2016LEVEL_fromJQSRTbutDoesNotCompile.f
+NAG Fortran Compiler Release 7.1(Hanzomon) Build 7114
+Evaluation trial version of NAG Fortran Compiler Release 7.1(Hanzomon) Build 7114
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 38: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 41: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 45: Byte count on numeric data type
+                        detected at *@8
+Error: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 1227: Implicit type for DFLOAT
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 1242: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 1243: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 1368: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 1369: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 1540: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 1542: Byte count on numeric data type
+                        detected at *@8
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 1780: Unused local variable NDMINT
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 1806: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 2603: Byte count on numeric data type
+                        detected at *@8
+Questionable: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 2894: Variable KVBB set but never referenced
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 2915: Byte count on numeric data type
+                        detected at *@8
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Unused dummy variable BMAX
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Unused local variable DE0
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Unused local variable DGDV2P
+Questionable: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Variable DGDVBP set but never referenced
+Questionable: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Variable DGDVM set but never referenced
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Unused local variable IV1
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Unused local variable IV2
+Questionable: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Variable KVB set but never referenced
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Unused local variable NPMAX
+Questionable: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3142: Variable PP1 set but never referenced
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3204: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3685: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3808: Byte count on numeric data type
+                        detected at *@8
+Questionable: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3989: Variable RT1 set but never referenced
+Questionable: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 3989: Variable RT2 set but never referenced
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 4005: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 4098: Byte count on numeric data type
+                        detected at *@8
+Questionable: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 4383: Variable RMIN set but never referenced
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 4409: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 4833: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 4926: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 5002: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 5126: Byte count on numeric data type
+                        detected at *@8
+Error: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 5301: Implicit type for BTT
+       detected at ,@BTT
+Error: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 5301: BTT is not an array
+       detected at )@<end-of-statement>
+Error: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 5957: Unrecognised format field SP1PD17.9
+       detected at ,@SP1PD17.9
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6024: Unused local variable IORDD
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6024: Unused local variable MM1
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6024: Local variable ZME is initialised but never used
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6036: Byte count on numeric data type
+                        detected at *@8
+Error: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6120: Missing comma in format specification
+       detected at 'C'@I1
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6196: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6335: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6556: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6557: Byte count on numeric data type
+                        detected at *@8
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6647: Unused local variable DEIGMX
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6647: Unused local variable MMTEMP
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6647: Unused local variable MODULUS
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6647: Unused local variable R9
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6647: Unused local variable RESID
+Warning: 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6647: Unused local variable Z
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6660: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6703: Byte count on numeric data type
+                        detected at *@8
+Non-standard(Obsolete): 2016LEVEL_fromJQSRTbutDoesNotCompile.f, line 6746: Byte count on numeric data type
+                        detected at *@8
+[NAG Fortran Compiler pass 1 error termination, 5 errors, 54 warnings]
+<builtin>: recipe for target '2016LEVEL_fromJQSRTbutDoesNotCompile.o' failed
+make: *** [2016LEVEL_fromJQSRTbutDoesNotCompile.o] Error 2
