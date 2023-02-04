@@ -5,8 +5,8 @@
   IMN2 = 6
   CHARGE = 0
   NUMPOT = 1
-  RH = 0.0009
-  RMIN = 0.225
+  RH = 0.0005
+  RMIN = 0.125
   PRV = 1
   ARV = 5.0d0
   EPS = 2.d-10

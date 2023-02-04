@@ -1,0 +1,20 @@
+&LEVEL
+
+ IAN1   =  3                                 # Atomic number for atom 1
+ IMN1   =  6                                 # Mass   number for atom 1 
+ IAN2   =  3                                 # Atomic number for atom 2
+ IMN2   =  6                                 # Mass   number for atom 2 
+ CHARGE =  0                                 # Charge of the molecule
+ VLIM   =  0.0d0                             # Energy at dissociation (cm-1)
+ RH     =  0.0005                            # ODE step size   
+ RMIN   =  0.125                             # ODE lower limit
+ PPAR   =  5                                 # p 
+ QPAR   =  3                                 # q
+ MMLR   =  6 8 10                            # Long-range inverse powers
+ DSCM   =  333.768                           # Depth  at equilibrium (cm-1) 
+ REQ    =  4.17001                           # Length at equilibrium (Angstrom)
+ RREF   =  8.0d0                             # Reference distance    (Angstrom)          
+ CMM    =  6.719e6  1.12635e8 2.78694e9      # Long-range constants (C6,C8,C10)
+ PARM   = -5.16e-1 -9.59e-2 1.17e-1 -2.28e-2 # Beta 0, Beta 1, Beta 2, Beta 3
+ LCDC   = 0
+
