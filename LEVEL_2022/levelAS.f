@@ -777,27 +777,27 @@ c** Get band constants for v=0-VMAX1 for generating trial eigenvalues
               KV= ILEV1
               EO= GV(KV)
               INNER= INNR1(KV)
-              WRITE(6,*) ''
-              WRITE(6,*) 'Exiting level.f'
-              WRITE(6,*) 'Entering schrq.f (2)'
-              WRITE(6,*) ''
+!             WRITE(6,*) ''
+!             WRITE(6,*) 'Exiting level.f'
+!             WRITE(6,*) 'Entering schrq.f (2)'
+!             WRITE(6,*) ''
               CALL SCHRQas(KV,JREF,EO,GAMA,PMAX1,VLIM1,VJ,
      1     WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD1,INNER,WARN,LPRWF)
-              WRITE(6,*) ''
-              WRITE(6,*) 'Exiting level.f'
-              WRITE(6,*) 'Entering cdjoel.f'
-              WRITE(6,*) ''
+!             WRITE(6,*) ''
+!             WRITE(6,*) 'Exiting level.f'
+!             WRITE(6,*) 'Entering cdjoel.f'
+!             WRITE(6,*) ''
 ! OPTIONALLY WRITE THE INPUT PARAMETERS FOR DEBUGGING:
-              WRITE(6,*) 'EO=',EO
-              WRITE(6,*) 'NBEG=',NBEG
-              WRITE(6,*) 'NEND=',NEND
-              WRITE(6,*) 'BvWN=',BvWN
-              WRITE(6,*) 'YH=',YH
-              WRITE(6,*) 'WARN=',WARN
-              WRITE(6,*) 'VJ(1)=',VJ(1)
-              WRITE(6,*) 'WF1(1)=',WF1(1)
-              WRITE(6,*) 'RM2(1)=',RM2(1)
-              WRITE(6,*) 'RCNST(1)=',RCNST(1)
+!             WRITE(6,*) 'EO=',EO
+!             WRITE(6,*) 'NBEG=',NBEG
+!             WRITE(6,*) 'NEND=',NEND
+!             WRITE(6,*) 'BvWN=',BvWN
+!             WRITE(6,*) 'YH=',YH
+!             WRITE(6,*) 'WARN=',WARN
+!             WRITE(6,*) 'VJ(1)=',VJ(1)
+!             WRITE(6,*) 'WF1(1)=',WF1(1)
+!             WRITE(6,*) 'RM2(1)=',RM2(1)
+!             WRITE(6,*) 'RCNST(1)=',RCNST(1)
               CALL CDJOELas(EO,NBEG,NEND,BvWN,YH,WARN,VJ,WF1,RM2,
      1                                                          RCNST)
               IF(NLEV1.LT.0) THEN
