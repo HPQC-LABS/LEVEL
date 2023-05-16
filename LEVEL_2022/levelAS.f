@@ -877,10 +877,17 @@ c** If appropriate (AUTO1>0) use ALFas results to generate trial eigenvalue
                   EO= ZK1(KV,0)
                   DEJ= EJ- EJREF
                   EJP= 1.d0
+c** Modification by RM and CF to check magnitudes of correction terms
+c are decreasing.  Fixes issue with near barrier levels.    
                   DO M= 1,7
-                      EJP= EJP*DEJ
-                      EO= EO+ EJP*ZK1(KV,M)
-                  ENDDO
+                      IF (DABS(EJP*DEJ*ZK1(KV,M)).LT.
+	1				  		DABS(EJP*ZK1(KV,M-1))) THEN
+						EJP= EJP*DEJ
+						EO= EO+ EJP*ZK1(KV,M)
+					  ELSE
+						EXIT
+					  ENDIF
+					ENDDO
               ELSE
 c... otherwise - use read-in trial energy
                   IF(IV(ILEV1).LT.VIBMX) EO= ZK1(IV(ILEV1),0)
