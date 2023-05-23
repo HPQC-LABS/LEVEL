@@ -1,0 +1,26 @@
+Test for Fix for Double Wells
+-Included a check that magnitudes of correction terms (not just coefficients) are decreasing.
+-Tests for this are the files Na2_61Sigg_DoubleWell.5, Na2_61Sigg_DoubleWell.6, and Na2_61Sigg_DoubleWell.7.  This example shows a calculation of v=172, J=45, which is an energy level near the top of the barrier of this double minimum potential that produces coefficients for the initial guess which has proven problematic before this fix.
+-The files Na2_61Sigg_DoubleWell_PrefixError.6 show the output prior to the fix for checking the correction terms and the .7 is empty
+	-Specifically; in the .6 file on line 100 of the .6 file the guess for the energy level is given as “Trial energy obtained from harmonic oscillator:     33319.397753338293” 
+-Na2_61Sigg_DoubleWell.7 as shows modified energy level output for better use in Excel formatting
+
+
+
+Test for Writing Wave Functions to .fun Files
+-All WF printing now prints WF(R) instead of WF(y)
+-If LPRWF<0 then WF/R prints entirely to .10 file
+-If LPRWF>0 then WF/R prints to individual files in directory
+-file names are ###v###JUS.fun (UpperState) or  ###v###JLS.fun (LowerState)
+-Both options print every |LPRWF|-th WF point
+-Example files (Na2_AtoX_WriteWFs.5) show calculation of v=3,4,5, J=30 of the upper state (.fun files) as well as matrix elements (Na2_AtoX_WriteWFs.8) of these levels with lowers state levels corresponding to v’=0,1,2,3,4 and delta_J = +/-1
+
+
+
+Test for Reading Wave Function from .fin File
+-If AUTO1.eq.0 then both energy and WF will be read in from external file with filename ###v###JUS.fin (005v030jUS.fin in example files)
+-The desired v,J levels are read in from the .5 input file.  The read in WF(R) points are converted to WF(y) and splined to program’s Y-mesh defined by the .5 input file.
+-.fin must be created; format of this file is the same as the .fun files generated from the written files from above so can they easily be converted from .fun to .fin
+-Example (Na2_AtoX_ReadWFs.5) calculation shows the same matrix elements calculated from the Write example but all upper state energy/WF information is read-in from the .fin files (003v030jUS.fin, 004v030jUS.fin, 005v030jUS.fin) instead of calculation within LEVEL. 
+-The Na2_AtoX_ReadWFs.8 output showing the result of these calculations can be compared with with values obtained from the Write example (Na2_AtoX_WriteWFs.8) where the energies/WFs were calculated entirely by LEVEL.
+
