@@ -56,11 +56,8 @@ c
      2 YMAX,aRVp,DREF,DREFP,CNN1,CNN2,RFLIM,CNNF,RFACTF,MFACTF,SOMEG1,
      3 SOMEG2,VLIM1,VLIM2,VD,VDMV,XX,ZMU,GI,GB,GBB,WV,FFAS,SL
 c
-      INTEGER NWFPTS,NSPWFPTS
-	  REAL*8 RTEMP(NDIMR),WFTEMP(NDIMR),WFTEMP2(NDIMR),YTEMP(NDIMR)
       CHARACTER*78 TITL
       CHARACTER*2 NAME1,NAME2
-	  CHARACTER*20 filename
 c
       DATA MEL/5.4857990945d-4/,YMAX/1.d+00/
 c** Default (Q-branch) defining J-increments for matrix element calcn.
@@ -375,11 +372,9 @@ c  vibrational levels of potential-1 up to  v = |NLEV1|.  [This case
 c  assumes  AUTO1 > 0.]
 c** If (AUTO1.gt.0) read in only (v,J) quantum numbers of NLEV1 desired 
 c  level & subroutine ALFas tries to locate them (normal preferred case).
-c** If (AUTO1.eq.0) (v,J) pairs given in input file have their energy 
-c      and WF read in from external file with name ###v###JUS.fin
-c   If (AUTO1.lt.0) also read in trial energy for each level.  In this
+c   If (AUTO1.le.0) also read in trial energy for each level.  In this
 c      case, the  NLEV.le.0  option does not work.
-c   If (AUTO1.lt.0) and vib. quant. No. IV < 0, seek level nearest to 
+c   If (AUTO1.le.0) and vib. quant. No. IV < 0, seek level nearest to 
 c      given trial energy but for whatever q. number shows up
 c** If(LCDC.gt.0) calculate centrifugal distortion constants for each 
 c  level via the Tellinghuisen implementation of Hutson's method.
@@ -404,7 +399,7 @@ c  individual powers of the chosen distance coordinate (or radial fx.)
 c* For  |LXPCT| > 5  WRITE(7,xx) only those matrix element components.
 c** IF(NJM > 0), for each vibrational level, calculate all rotational
 c  levels up to  J=NJM  or predissociation, whichever comes first.
-c  Note that  AUTO1.lt.0  forces  NJM= 0
+c  Note that  AUTO1.le.0  forces  NJM= 0
 c** When (NJM.GT.0) increase J in increments of JDJR.
 c** IF(IWR.NE.0) print error & warning descriptions
 c  IF(IWR.GE.1) also print final eigenvalues & node count.
@@ -453,20 +448,16 @@ c!!
         ENDIF
       VMAX1= 0
 c** Read the vibrational & rotational quantum numbers IV(i) & IJ(i) [and
-c  if AUTO1.lt.0 also trial energy GV(I)] of the NLEV levels to be found
+c  if AUTO1.le.0 also trial energy GV(I)] of the NLEV levels to be found
 c** For  IV(i)  values < -10,  SCHRQ  imposes a hard wall boundary
 c  condition (i.e., a node) at mesh point # |-IV(i)| .
-c** Change from RFM/CF - If AUTO1.eq.0 then both energy and WF will be 
-c read in from external file, WF will be splined to program Y-mesh.
 c-----------------------------------------------------------------------
       IF(AUTO1.GT.0) READ(5,*) (IV(I), IJ(I), I= 1,NLEV)
-	  IF(AUTO1.EQ.0) READ(5,*) (IV(I), IJ(I), I= 1,NLEV)
-      IF(AUTO1.LT.0) READ(5,*) (IV(I), IJ(I), GV(I), I= 1,NLEV)
+      IF(AUTO1.LE.0) READ(5,*) (IV(I), IJ(I), GV(I), I= 1,NLEV)
 c-----------------------------------------------------------------------
       IF(NLEV1.GT.0) THEN
           IF(AUTO1.GT.0) WRITE(6,607) NLEV,(IV(I),IJ(I),I=1,NLEV)
-		  IF(AUTO1.EQ.0) WRITE(6,6077) NLEV,(IV(I),IJ(I),I=1,NLEV)
-          IF(AUTO1.LT.0) THEN
+          IF(AUTO1.LE.0) THEN
               WRITE(6,6607) NLEV,(IV(I),IJ(I),GV(I),I=1,NLEV)
               DO  I= 1,NLEV1
                   IF(IV(I).LT.VIBMX) ZK1(IV(I),0)= GV(I)
@@ -761,7 +752,7 @@ c** Option to search for very highest level (within 0.0001 cm-1 of Disoc)
               WRITE(6,*) 'Entering schrq.f (1)'
               WRITE(6,*) ''
               CALL SCHRQas(KV,JREF,EO,GAMA,PMAX1,VLIM1,VJ,
-     1      WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD1,INNER,IWR,LPRWF,1)
+     1      WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD1,INNER,IWR,LPRWF)
               IV(1)= KV
               IF(KV.GE.0) THEN
                   WRITE(6,622) IJ(1),KV,VLIM1-EO
@@ -791,7 +782,7 @@ c** Get band constants for v=0-VMAX1 for generating trial eigenvalues
 !             WRITE(6,*) 'Entering schrq.f (2)'
 !             WRITE(6,*) ''
               CALL SCHRQas(KV,JREF,EO,GAMA,PMAX1,VLIM1,VJ,
-     1     WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD1,INNER,WARN,LPRWF,1)
+     1     WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD1,INNER,WARN,LPRWF)
 !             WRITE(6,*) ''
 !             WRITE(6,*) 'Exiting level.f'
 !             WRITE(6,*) 'Entering cdjoel.f'
@@ -851,7 +842,7 @@ c ... otherwise, generate them (as above) with SCHRQ & CDJOEL
                   WRITE(6,*) 'Entering schrq.f (3)'
                   WRITE(6,*) ''
                   CALL SCHRQas(KV,JREF,EO,GAMA,PMAX2,VLIM2,VJ,
-     1     WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD2,INNER,WARN,LPRWF,1)
+     1     WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD2,INNER,WARN,LPRWF)
                   CALL CDJOELas(EO,NBEG,NEND,BvWN,YH,WARN,VJ,WF1,
      1                                                      RM2,RCNST)
                   ZK2(IV2(ILEV2),0)= EO
@@ -881,55 +872,12 @@ c** If NJM > IJ(ILEV1) loop over range of rotational levels too
               IF(IOMEG1.GE.99) EJ= JROT*JROT - 0.25D0
 c** If   IOMEG < 0   centrifugal term is  [J(J+1) + |IOMEG|]
               IF(IOMEG1.LT.0) EJ= JROT*(JROT+1) - DFLOAT(IOMEG1)
-c** If (AUTO.eq.0) read in energy and WF from file and spline to mesh
-			  IF(AUTO1.EQ.0) THEN
-                WRITE(filename,'(i3.3,a1,i3.3,a7)')
-     1          KV,'v',JROT,'jUS.fin'
-                    OPEN(UNIT=30,FILE=filename,STATUS='OLD',
-     1                                      ACTION='READ')
-                    READ(30,*) EO, NWFPTS
-                    DO i = 1,NWFPTS
-                        READ(30,*) RTEMP(i),WFTEMP(i)
-				YTEMP(i)=(RTEMP(i)**pRV - aRVp)/(RTEMP(i)**pRV + aRVp)
-                    END DO
-                    CLOSE(UNIT=30)
-				NSPWFPTS = INT((YTEMP(NWFPTS)-YVB(1))/YH) + 1	
-				DO i = 1,NSPWFPTS
-					WFTEMP2(i) = 0.d0
-				END DO
-				CALL SPLINT(1,NWFPTS,YTEMP,WFTEMP,1,NSPWFPTS,
-     1                                           YVB,WFTEMP2)
-				DO i = 1,NSPWFPTS
-					WF1(i) = WFTEMP2(i)
-				END DO	
-c Get NBEG for read-in WF and zero everything prior				
-				DO  J= 1,NSPWFPTS
-					IF(DABS(WF1(J)).GE.1.D-9) GO TO 150
-					ENDDO
-  150			NBEG = J-1
-				J= J-2
-				DO  I= 1,J
-					WF1(I)= 0.d0
-					ENDDO
-c Get NEND for read-in WF and zero everything past
-				J= NSPWFPTS
-				DO  I= NBEG,NSPWFPTS
-					IF(DABS(WF1(J)).GT.1.D-9) GO TO 151
-					J= J-1
-					ENDDO
-  151     		NEND= J+1
-				DO  I= NEND+1,NSPWFPTS
-					WF1(I)= 0.d0
-				ENDDO
-				DO I=NBEG,NEND
-				WRITE(12,*) YVB(I),RVB(I), WF1(I)
-				ENDDO
 c** If appropriate (AUTO1>0) use ALFas results to generate trial eigenvalue
-              ELSEIF(AUTO1.GT.0) THEN
+              IF(AUTO1.GT.0) THEN
                   EO= ZK1(KV,0)
                   DEJ= EJ- EJREF
                   EJP= 1.d0
-c** Modification by RFM and CF to check magnitudes of correction terms
+c** Modification by RM and CF to check magnitudes of correction terms
 c are decreasing.  Fixes issue with near barrier levels.    
                   DO M= 1,7
                       IF (DABS(EJP*DEJ*ZK1(KV,M)).LT.
@@ -945,7 +893,7 @@ c... otherwise - use read-in trial energy
                   IF(IV(ILEV1).LT.VIBMX) EO= ZK1(IV(ILEV1),0)
                   IF(IV(ILEV1).GE.VIBMX) EO= GV(ILEV1)
               ENDIF
-              IF((AUTO1.LT.0).AND.(DABS(ZK1(IV(ILEV1),0)).LE.0.d0)) THEN
+              IF((AUTO1.LE.0).AND.(DABS(ZK1(IV(ILEV1),0)).LE.0.d0)) THEN
                   CALL SCATTLEN(JROT,SL,VLIM1,V1,WF1,BFCT,YMIN,YH,NPP,
      1                 CNN1,NCN1,IWR,IOMEG1,IAN1,IAN2,IMN1,IMN2,LPRWF)
                   IF(NUMPOT.EQ.1) GOTO 2
@@ -980,7 +928,7 @@ c** Call SCHRQ to find Potential-1 eigenvalue EO and eigenfn. WF1(i)
               WRITE(6,*) 'Entering schrq.f (4)'
               WRITE(6,*) ''
   100         CALL SCHRQas(KV,JROT,EO,GAMA,PMAX1,VLIM1,VJ,
-     1      WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD1,INNER,IWR,LPRWF,1)
+     1      WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD1,INNER,IWR,LPRWF)
               IF(KV.LT.0) THEN
 c** SCHRQ  error condition is  (KV.LT.0) .
                   IF(NJM.GT.IJ(ILEV1)) THEN
@@ -1023,7 +971,7 @@ c** Calculate 'true' rotational constants for rotationless IOMEG>0 case
                       WRITE(6,*) 'Entering schrq.f (5)'
                       WRITE(6,*) ''
                       CALL SCHRQas(KV,0,EO,GAMA,PMAX1,VLIM1,V1,
-     1      WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD1,INNER,IWR,LPRWF,1)
+     1      WF1,BFCT,EPS,YMIN,YH,NPP,NBEG,NEND,INNOD1,INNER,IWR,LPRWF)
                       CALL CDJOELas(EO,NBEG,NEND,BvWN,YH,WARN,V1,
      1                                                  WF1,RM2,RCNST)
                   ELSE
@@ -1097,7 +1045,7 @@ c** Now ... update to appropriate centrifugally distorted potential
                       WRITE(6,*) 'Entering schrq.f (6)'
                       WRITE(6,*) ''
   110                 CALL SCHRQas(KV2,JROT2,EO2,GAMA,PMAX2,VLIM2,VJ,
-     1    WF2,BFCT,EPS,YMIN,YH,NPP,NBEG2,NEND2,INNOD2,INNER,IWR,LPRWF,2)
+     1    WF2,BFCT,EPS,YMIN,YH,NPP,NBEG2,NEND2,INNOD2,INNER,IWR,LPRWF)
                       IF(KV2.NE.KVIN) THEN
                           IF(KV2.LT.0) GO TO 114
 c** Using CDC's to estimate trial eigenvalue failed:
@@ -1245,9 +1193,6 @@ c-------------------------------------------------------------------
   607 FORMAT(/' Solve for the',i4,' vibration-rotation levels of Potenti
      1al-1:'/'   (v,J) =',6('  (',i3,',',i3,')':)/(10x,6('  (',i3,',',
      2  i3,')':)))
- 6077 FORMAT(/' Read-in for the',i4,' vibration-rotation levels of Potenti
-     1al-1:'/'   (v,J) =',6('  (',i3,',',i3,')':)/(10x,6('  (',i3,',',
-     2  i3,')':))) 	 
  6607 FORMAT(/' Solve for',i4,' vibration-rotation levels of Potential-1
      1 using Trial energies:'/(3x,3('   E(',I3,',',I3,')=',
      2 F11.2:)))
@@ -1327,8 +1272,8 @@ c-------------------------------------------------------------------
      1alue  at  RMIN')
   688 FORMAT(' Potential-',i1,' uses symmetric-well inner boundary condi
      1tion  of zero slope at RMIN')
-  703 FORMAT(1X,I4,I5,F13.4,G13.5)
-cc703 FORMAT(1X,I4,I5,1PD20.11,D13.5)
+cc703 FORMAT(1X,I4,I5,F13.4,G13.5)
+  703 FORMAT(1X,I4,I5,1PD20.11,D13.5)
   723 FORMAT(/A78/1x,'Output values of:  v, J, E & (Level Width)')
   724 FORMAT(//A78//'   v   J    E(v,J)     Width       <KE>',
      1  6x,'<M(r)>  &  <XI**k>  for k=1 to',i3/2x,38('=='))
@@ -2913,7 +2858,7 @@ c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 !     WRITE(6,*) 'LPRWF=',LPRWF
 !     WRITE(6,*) ''
       CALL SCHRQas(KV,JROT,EO,GAMA,PMAX,VLIM,V,SWF,BFCT,EPS,YMIN,YH,NDP,
-     1                               NBEG,NEND,INNODE,INNER,IWR,LPRWF,1)
+     1                               NBEG,NEND,INNODE,INNER,IWR,LPRWF)
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       IF(KV.LT.0) THEN
 c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3328,7 +3273,7 @@ c * Normally use  INNER=0 ,  but to find inner-well levels of double
 c     minimum potential, set  INNER > 0 .
 c-----------------------------------------------------------------------
       SUBROUTINE SCHRQas(KV,JROT,EO,GAMA,VMAX,VLIM,V,WF,BFCT,EEPS,YMIN,
-     1                   YH,NPP,NBEG,NEND,INNODE,INNER,IWR,LPRWF,STATE)
+     1                        YH,NPP,NBEG,NEND,INNODE,INNER,IWR,LPRWF)
 c-----------------------------------------------------------------------
 c** Output vibrational quantum number KV, eigenvalue EO, normalized
 c  wave function WF(I), and range, NBEG .le. I .le. NEND  over
@@ -3361,13 +3306,12 @@ c!!
 c!!
       INTEGER  I,IBEGIN,ICOR,INNODE,INNER,IQTST,IT,ITER,ITP1,ITP1P,
      1  ITP2,ITP3,IWR,J,J1,J2,JPSIQ,JQTST,JROT,KKV,KV,KVIN,LPRWF,M,
-     2  MS,MSAVE,NPP,NBEG,NDN,NEND,NPR,STATE
+     2  MS,MSAVE,NPP,NBEG,NDN,NEND,NPR
 c
       REAL*8  BFCT,DE,DEP,DEPRN,DF,DOLD,DSOC,E,EEPS,EO,EPS,F,GAMA,
      1  GI,GB,H,HT,PROD,PPROD,RATIN,RATOUT,RATST,REND,YH,YMIN,
      2  YMINN,RR,SB,SI,SN,SRTGI,SRTGB,SM,VLIM,VMAX,VMX,VPR,WKBTST,XEND,
      3  XPR,XPW,DXPW,Y1,Y2,Y3,YIN,YM,YOUT,WF(NPP),V(NPP)
-	  CHARACTER*20 filename
       DATA RATST/1.D-9/,XPW/23.03d0/
       DATA NDN/10/
 c++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3756,12 +3700,6 @@ c** Zero out wavefunction array at distances past NEND
               WF(I)= 0.d0
               ENDDO
           ENDIF
-c** RFM/CF Edit for writing WF - WF prints as function of R not Y
-c  If LPRWF<0 then WF/R prints entirely to .10 file
-c  If LPRWF>0 then WF/R prints to individual files in directory
-c  file names are ###v###JUS.fun (UpperState) 
-c             or  ###v###JLS.fun (LowerState)
-c  Both options print every |LPRWF|-th WF point
       IF(LPRWF.LT.0) THEN
 c** If desired, write every |LPRWF|-th point of wave function to a file
 c  on channel-10, starting at mesh point # NBEG for radial distance
@@ -3770,36 +3708,16 @@ c  YVB(NBEG), with the NPR values separated by mesh step  JPSIQ*YH
           NPR= 1+(NEND-NBEG)/JPSIQ
 c** Write every JPSIQ-th point of the wave function for level  v=KV
 c  J=JROT , beginning at mesh point NBEG & distance RSTT where
-          WRITE(10,701) KV,JROT,EO,NPR,RVB(NBEG),RH*JPSIQ,NBEG,JPSIQ
-          WRITE(10,702) (RVB(I),WF(I),I=NBEG,NEND,JPSIQ)
-      ELSEIF(LPRWF.GT.0) THEN
-		  JPSIQ= LPRWF
-          NPR= 1+(NEND-NBEG)/JPSIQ
-			IF(STATE.EQ.1) THEN
-                WRITE(filename,'(i3.3,a1,i3.3,a7)')
-     1          KV,'v',JROT,'jUS.fun'
-                OPEN(UNIT=20,FILE=filename,STATUS='REPLACE',
-     1          ACTION='WRITE')
-                WRITE(20,'(f20.14,2x,2i10)')  EO, NPR
-				WRITE(20,703) (RVB(I),WF(I),I=NBEG,NEND,JPSIQ)
-                CLOSE(UNIT=20)
-			ELSEIF(STATE.EQ.2)THEN
-		        WRITE(filename,'(i3.3,a1,i3.3,a7)')
-     1          KV,'v',JROT,'jLS.fun'
-                OPEN(UNIT=20,FILE=filename,STATUS='REPLACE',
-     1          ACTION='WRITE')
-                WRITE(20,'(f20.14,2x,2i10)')  EO, NPR
-				WRITE(20,703) (RVB(I),WF(I),I=NBEG,NEND,JPSIQ)
-                CLOSE(UNIT=20)
-			ENDIF
-      ENDIF
+          WRITE(10,701) KV,JROT,EO,NPR,YVB(NBEG),YH*JPSIQ,NBEG,JPSIQ
+          WRITE(10,702) (YVB(I),WF(I),I=NBEG,NEND,JPSIQ)
+          ENDIF
       IF(IWR.EQ.1) WRITE(6,607) KV,JROT,EO
       IF(IWR.GE.2) THEN
           REND= aRV*((1.d0+YVB(NEND-1))/(1.d0-YVB(NEND-1)))**(1.d0/pRV)
           RATIN= RATIN*SDRDY(NBEG+1)/SDRDY(MSAVE)
           RATOUT= RATOUT*SDRDY(NEND-1)/SDRDY(MSAVE)
           WRITE(6,607) KV,JROT,EO,ITER,RR,RATIN,NBEG,REND,RATOUT,NEND-1
-		  ENDIF
+          ENDIF
 c** For quasibound levels, calculate width in subroutine "WIDTH"
       IF((E.GT.DSOC).AND.(KVIN.GT.-10)) CALL WIDTHas(KV,JROT,E,EO,DSOC,
      1  VBZ,WF,RVB,SDRDY,VMX,YMIN,H,BFCT,IWR,ITP1,ITP2,ITP3,INNER,NPP,
@@ -3858,7 +3776,6 @@ c** Return in error mode
      1ion at',I6,' points.'/7x,'R(1-st)=',F12.8,'   mesh=',F12.8,
      2  '   NBEG=',I4,'   |LPRWF|=',I3)
   702 FORMAT((4(f10.6,f11.7)))
-  703 FORMAT((f10.6,f11.7))
       END
 c23456789 123456789 123456789 123456789 123456789 123456789 123456789 12
 
@@ -5394,7 +5311,7 @@ c** Assumes both R1(J) & XX(I) are monotonic increasing.
 c+++++ Calls only subroutines SPLINE and PLYINTRP ++++++++++++++++++++++
 c=======================================================================
       INTEGER MAXSP
-      PARAMETER (MAXSP=100000)
+      PARAMETER (MAXSP=6400)
       INTEGER  I,IER,I1ST,IDER,JK,K,KK,LNPT,N2,N3,NIPT,NTP,MBEG,MEND
       REAL*8 EPS,R2,RI,RRR,TTMP,R1(NTP),V1(NTP),CSP(MAXSP),
      1  YY(MEND),XX(MEND)
