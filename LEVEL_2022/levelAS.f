@@ -3756,7 +3756,7 @@ c** Zero out wavefunction array at distances past NEND
               WF(I)= 0.d0
               ENDDO
           ENDIF
-c** RFM/CF Edit for writing WF - WF prints as function of R not Y
+c** RFM/CF Edit for writing WF - WF prints as function of R and Y
 c  If LPRWF<0 then WF/R prints entirely to .10 file
 c  If LPRWF>0 then WF/R prints to individual files in directory
 c  file names are ###v###JUS.fun (UpperState) 
@@ -3771,7 +3771,7 @@ c  YVB(NBEG), with the NPR values separated by mesh step  JPSIQ*YH
 c** Write every JPSIQ-th point of the wave function for level  v=KV
 c  J=JROT , beginning at mesh point NBEG & distance RSTT where
           WRITE(10,701) KV,JROT,EO,NPR,RVB(NBEG),RH*JPSIQ,NBEG,JPSIQ
-          WRITE(10,702) (RVB(I),WF(I),I=NBEG,NEND,JPSIQ)
+          WRITE(10,702) (RVB(I),WF(I),YVB(I),I=NBEG,NEND,JPSIQ)
       ELSEIF(LPRWF.GT.0) THEN
 		  JPSIQ= LPRWF
           NPR= 1+(NEND-NBEG)/JPSIQ
@@ -3781,7 +3781,7 @@ c  J=JROT , beginning at mesh point NBEG & distance RSTT where
                 OPEN(UNIT=20,FILE=filename,STATUS='REPLACE',
      1          ACTION='WRITE')
                 WRITE(20,'(f20.14,2x,2i10)')  EO, NPR
-				WRITE(20,703) (RVB(I),WF(I),I=NBEG,NEND,JPSIQ)
+				WRITE(20,703) (RVB(I),WF(I),YVB(I),I=NBEG,NEND,JPSIQ)
                 CLOSE(UNIT=20)
 			ELSEIF(STATE.EQ.2)THEN
 		        WRITE(filename,'(i3.3,a1,i3.3,a7)')
@@ -3789,7 +3789,7 @@ c  J=JROT , beginning at mesh point NBEG & distance RSTT where
                 OPEN(UNIT=20,FILE=filename,STATUS='REPLACE',
      1          ACTION='WRITE')
                 WRITE(20,'(f20.14,2x,2i10)')  EO, NPR
-				WRITE(20,703) (RVB(I),WF(I),I=NBEG,NEND,JPSIQ)
+				WRITE(20,703) (RVB(I),WF(I),YVB(I),I=NBEG,NEND,JPSIQ)
                 CLOSE(UNIT=20)
 			ENDIF
       ENDIF
